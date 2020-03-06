@@ -2577,6 +2577,9 @@ header .header-inner .action-menu img {
   .sellos .sellos-inner .info {
     width: 44%;
   }
+  .sellos .sellos-inner .los-sellos .item p {
+    margin-bottom: 20px;
+  }
 }
 /* CTA: Contacto */
 .cta-contacto .products-img {
