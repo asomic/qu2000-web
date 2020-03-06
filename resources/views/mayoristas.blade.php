@@ -59,8 +59,8 @@
             </section>
 
             <!-- Testimonios -->
-            <section class="mayoristas-testimonios-wrapper pd-lr">
-                <div class="mayoristas-testimonios">
+            <section class="mayoristas-testimonios-wrapper ">
+                <div class="mayoristas-testimonios pd-lr">
 
                     <!-- Item -->
                     <div class="item">

@@ -20,7 +20,6 @@
                         <p class="unico">
                             Proin urna urna, aliquet ac scelerisque at, aliquet vel purus. Morbi malesuada et libero sed porttitor. Integer eu leo nec neque iaculis ornare quis nec nulla. Duis odio tellus, faucibus id ex non, euismod tempor nunc. Phasellus nec felis eros. Duis sed convallis odio.
                         </p>
-
                         <div class="add-cotz">
                             <label for="quantity">
                                 <input id="quantity" type="number" value="1" min="1" class="quantity">

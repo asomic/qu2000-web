@@ -13,8 +13,8 @@
                 </div>
             </section>
 
-            <section class="contacto-data-wrapper pd-lr">
-                <div class="contacto-data">
+            <section class="contacto-data-wrapper ">
+                <div class="contacto-data pd-lr">
                     <div class="mapa">
                         <div class="mapouter">
                             <div class="gmap_canvas">

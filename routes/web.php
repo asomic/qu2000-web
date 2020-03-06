@@ -6,6 +6,9 @@ Route::get('/', 'HomeController@index');
 
 Route::get('catalogo', 'CatalogoController@index');
 
+Route::get('catalogo/{category_id}', 'CatalogoController@shearch');
+
+
 
 // Route::get('/', function () {
 //     return view('inicio');

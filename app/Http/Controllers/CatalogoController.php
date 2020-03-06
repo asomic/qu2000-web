@@ -25,6 +25,28 @@ class CatalogoController extends Controller
     }
 
 
+    /**
+     * [shearch Buscar las categorias por la ID ]
+     *
+     * @param   [type]  $id  [$id Parametro que quiero buscar]
+     * guardar products. Product"Nombre de la tabla" where en donde caregory_id sea igual al parametro que le pasamos
+     *
+     * @return  [retorna la mvista catalogo]       [return en donde se envia un producto y su categorira]
+     */
+    public function shearch($id)
+    {
+
+        $products = Product::where('category_id', (int)$id)->get();
+        $categories = Category::all();
+        return view('catalogo')->with([
+            'products'=>$products,
+            'categories'=>$categories
+
+        ]);
+
+    }
+
+
 
 
     /**

@@ -15,8 +15,8 @@
                             <div class="toggle-cat"></div>
                         </div>
                         <nav class="items">
-                    @foreach ($categories as $category)
-                            <a href="">{{ $category->name }}</a>
+                            @foreach ($categories as $category)
+                            <a href="{{ url('catalogo/' . $category->id)}}">{{ $category->name }}</a>
                     @endforeach
 
 

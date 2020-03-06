@@ -48,7 +48,7 @@
             </div>
 
             <!-- CTA Full Wide -->
-            <section class="cta-full-wide empresa-familiar pd-lr">
+            <section class="cta-full-wide empresa-familiar ">
                 <div class="data">
                     <img src="{{ asset('/images/logo.png') }}" alt="QU2000">
                     <h1 class="inv">Una Empresa Familiar del Maule para Chile</h1>
@@ -58,8 +58,8 @@
             </section>
 
             <!-- CTA: Seamos socios -->
-            <section class="cta-socios pd-lr">
-                <div class="socios-inner">
+            <section class="cta-socios">
+                <div class="socios-inner pd-lr">
                     <div class="data">
                         <h1 class="inv">Seamos Socios</h1>
                         <p>
@@ -72,10 +72,11 @@
             </section>
 
             <!-- Sellos -->
-            <section class="sellos pd-lr">
-                <div class="sellos-inner">
+            <section class="sellos">
+                <div class="sellos-inner pd-lr">
                     <div class="info">
-                        <h1>Si va a pagar poco lleve productos de calidad</h1>
+                        <h1>Si va a pagar poco
+                            lleve productos de calidad</h1>
                         <p>
                             Praesent a massa quis ex accumsan bibendum in ut mauris. Integer tristique at lacus sed egestas. Fusce dignissim laoreet lobortis. Donec lobortis semper augue, ac luctus leo malesuada vel.
                         </p>
@@ -99,10 +100,10 @@
 
             <!-- CTA Contacto -->
             <section class="cta-contacto">
-                <div class="products-img">
-                    <img src="{{ asset('/images/products.png') }}" alt="Productos QU2000">
+                <div class="products-img" >
+                    <img class=" pd-lr"  src="{{ asset('/images/products.png') }}" alt="Productos QU2000">
                 </div>
-                <div class="contacto-inner pd-lr">
+                <div class="contacto-inner">
                     <h1 class="inv">Contáctenos</h1>
                     <p class="inv">Praesent a massa quis ex accumsan bibendum in ut mauris. Integer tristique at lacus sed egestas. Fusce dignissim laoreet lobortis. Donec lobortis semper augue, ac luctus leo malesuada vel.</p>
                     <div class="buttons">
