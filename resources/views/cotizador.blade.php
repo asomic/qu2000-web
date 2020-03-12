@@ -22,7 +22,7 @@
                             </div>
                             <div class="modify">
                                 <input id="quantity" type="number" value="1" min="1" class="quantity">
-                                <a href="#"><img src="/assets/images/icon-trash.png"></a>
+                                <a href="#"><img src="{{asset('/images/icon-trash.png')}}"></a>
                             </div>
                         </div>
 
