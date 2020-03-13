@@ -39,7 +39,7 @@
                             </div>
                             <div class="modify">
                                 <input id="quantity" type="number" value="1" min="1" class="quantity">
-                                <a href="#"><img src="/assets/images/icon-trash.png"></a>
+                                <a href="#"><img src="{{asset('/images/icon-trash.png')}}"></a>
                             </div>
                         </div>
 
@@ -56,7 +56,7 @@
                             </div>
                             <div class="modify">
                                 <input id="quantity" type="number" value="1" min="1" class="quantity">
-                                <a href="#"><img src="/assets/images/icon-trash.png"></a>
+                                <a href="#"> <img src="{{asset('/images/icon-trash.png')}}"></a>
                             </div>
                         </div>
 
@@ -67,77 +67,74 @@
                 <div class="cot-form-wrapper">
                     <div class="cot-form">
                         <h3>Cotizador</h3>
-                        <form action="">
+                        <form action="{{route('rutac')}}" method="POST">
+                            @csrf
                             <div class="item nombre">
                                 <label for="">Nombre</label>
-                                <input type="text" placeholder="Ingrese su nombre">
+                                <input type="text" name="name" placeholder="Ingrese su nombre">
                             </div>
                             <div class="item correo">
                                 <label for="">Correo</label>
-                                <input type="email" placeholder="Ingrese su correo">
+                                <input type="email" name="mail" placeholder="Ingrese su correo">
                             </div>
                             <div class="item ciudad">
                                 <label for="">Ciudad</label>
-                                <input type="text" placeholder="Ingrese su ciudad">
+                                <input type="text" name="city" placeholder="Ingrese su ciudad">
                             </div>
                             <div class="item region">
                                 <label for="">Región</label>
                                 <!-- <input type="select" placeholder="Ingrese su región"> -->
-                                <select name="" id="">
+                                <select name="region" required>
                                 <option value="" disabled selected>Seleccione una región</option>
-                                    <option value="">I de Tarapacá</option>
-                                    <option value="">II de Antofagasta</option>
-                                    <option value="">III de Atacama</option>
-                                    <option value="">IV de Coquimbo</option>
-                                    <option value="">V de Valparaíso </option>
-                                    <option value="">VI del Libertador General Bernardo O'Higgins</option>
+                                    <option value="I de Tarapacá">I de Tarapacá</option>
+                                    <option value="II de Antofagasta">II de Antofagasta</option>
+                                    <option value="III de Atacama">III de Atacama</option>
+                                    <option value="IV de Coquimbo">IV de Coquimbo</option>
+                                    <option value="V de Valparaíso">V de Valparaíso </option>
+                                    <option value="VI del Libertador General ">VI del Libertador General Bernardo O'Higgins</option>
                                 </select>
                             </div>
                             <div class="item checks">
 
                                 <label for="radio">
-                                    <input type="radio" name="radio" class="radio-select" id="radio-persona" value="persona">
-                                    <span>Persona</span>
-                                </label>
-
-                                <label for="radio">
-                                    <input type="radio" name="radio" class="radio-select" id="radio-empresa" value="empresa">
+                                    <input type="radio" name="type_client" class="radio-select" id="radio-persona" value="empresa" re>
                                     <span>Empresa</span>
                                 </label>
 
+                                <label for="radio">
+                                    <input type="radio" name="type_client" class="radio-select" id="radio-empresa" value="persona">
+                                    <span>Persona</span>
+                                </label>
+
                             </div>
-                            <!-- If Empresa -->
-                            <div class="if-empresa hide">
+                             <!-- If Empresa -->
+                             <div class="if-empresa hide">
                                 <div class="item nombre-empresa">
                                     <label for="">Empresa</label>
-                                    <input type="text" placeholder="Ingrese el nombre de la empresa">
+                                    <input type="text" name="company" placeholder="Ingrese el nombre de la empresa"  >
+                            </div>
                             </div>
                             <div class="item rut-empresa">
-                                    <label for="">RUT</label>
-                                    <input type="text" placeholder="Ingrese su RUT">
-                            </div>
-                            <div class="item telefono-empresa">
-                                    <label for="">Teléfono</label>
-                                    <input type="tel" placeholder="Ingrese su teléfono">
-                            </div>
-                            </div>
+                                <label for="">RUT</label>
+                                <input type="text" name="rut" placeholder="Ingrese su RUT">
+                        </div>
+                        <div class="item telefono-empresa">
+                                <label for="">Teléfono</label>
+                                <input type="tel" name="phone" placeholder="Ingrese su teléfono">
+                        </div>
+
                             <!-- If Persona -->
                             <div class="if-persona">
-                                <div class="item rut">
-                                    <label for="">RUT</label>
-                                    <input type="text" placeholder="Ingrese el RUT de la empresa">
-                            </div>
-                            <div class="item telefono">
-                                    <label for="">Teléfono</label>
-                                    <input type="tel" placeholder="Ingrese un teléfono de contacto">
-                            </div>
+
+
                             </div>
                             <div class="item detalle">
                                 <label for="">Detalle (Opcional)</label>
-                                <textarea name="" id="" placeholder="Ingrese el detalle"></textarea>
+                                <textarea name="message"  placeholder="Ingrese el detalle"></textarea>
                         </div>
-                            <button class="button ready">Enviar</button>
+                            <button class="button ready"  type="submit" >Enviar</button>
                         </form>
+
                     </div>
                 </div>
             </div>

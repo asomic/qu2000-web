@@ -8,6 +8,11 @@ Route::get('catalogo', 'CatalogoController@index');
 
 Route::get('catalogo/{category_id}', 'CatalogoController@shearch');
 
+Route::post('/enviado', 'MailController@sendmail')->name('ruta');
+
+Route::post('/enviadoM', 'MailControllerMayorista@sendmail')->name('rutam');
+
+Route::post('/enviadoC', 'MailControllerCotizador@mail')->name('rutac');
 
 
 // Route::get('/', function () {

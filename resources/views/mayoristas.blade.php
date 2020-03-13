@@ -20,23 +20,24 @@
                         </nav>
                     </div>
                     <div class="form">
-                        <form action="">
+                        <form action="{{route('rutam')}}" method="POST">
+                            @csrf
                             <label for="">
                                 <span>Nombre</span>
-                                <input type="text" placeholder="Ingrese su nombre">
+                                <input type="text" name="name" placeholder="Ingrese su nombre">
                             </label>
                             <label for="">
                                 <span>Correo</span>
-                                <input type="email" placeholder="Ingrese su correo">
+                                <input type="email" name="mail" placeholder="Ingrese su correo">
                             </label>
                             <label for="">
                                 <span>Teléfono</span>
-                                <input type="tel" placeholder="Ingrese su teléfono">
+                                <input type="tel" name="phone" placeholder="Ingrese su teléfono">
                             </label>
                             <label for="">
                                 <span>Región</span>
                                 <!-- <input type="text" placeholder="Ingrese su región"> -->
-                                <select name="" id="">
+                                <select name="region" required>
                                     <option value="" disabled selected>Seleccione una región</option>
                                     <option value="I de Tarapacá">I de Tarapacá</option>
                                     <option value="II de Antofagasta">II de Antofagasta</option>
@@ -45,15 +46,17 @@
                             </label>
                             <label for="">
                                 <span>Tipo de Negocio</span>
-                                <select name="" id="">
+                                <select name="deal" required>
                                     <option value="" disabled selected>Seleccione un Tipo de Negocio</option>
                                     <option value="Valor 1">Valor 1</option>
                                     <option value="Valor 2">Valor 2</option>
                                     <option value="Valor 3">Valor 3</option>
                                 </select>
                             </label>
-                            <button class="button goto">Quiero ser socio</button>
+
+                            <button class="button goto" type="submit">Quiero ser socio</button>
                         </form>
+
                     </div>
                 </div>
             </section>

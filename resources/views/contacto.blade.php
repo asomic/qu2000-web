@@ -25,29 +25,31 @@
                     </div>
 
 
+
                     <div class="form">
-                        <form action="">
+                        <form action="{{route('ruta')}}" method="POST">
+                            @csrf
                             <label for="">
                                 <span>Nombre</span>
-                                <input type="text" placeholder="Ingrese su nombre">
+                                <input type="text" name="name" placeholder="Ingrese su nombre">
                             </label>
                             <label for="">
                                 <span>Correo</span>
-                                <input type="email" placeholder="Ingrese su correo">
+                                <input type="email" name="mail" placeholder="Ingrese su correo">
                             </label>
                             <label for="">
                                 <span>Motivo</span>
-                                <input type="text" placeholder="Ingrese motivo de contacto">
+                                <input type="text" name="reason" placeholder="Ingrese motivo de contacto">
                             </label>
                             <label for="" class="label-textarea">
                                 <span>Mensaje</span>
-                                <textarea name="" id="" placeholder="Ingrese mensaje"></textarea>
+                                <textarea name="message"  placeholder="Ingrese mensaje"></textarea>
                             </label>
-                            <button class="button ready">Enviar</button>
+                            <button class="button ready"  type="submit" name="enviarContacto">Enviar</button>
                         </form>
                     </div>
 
-                    
+
                 </div>
             </section>
 
