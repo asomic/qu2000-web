@@ -1,5 +1,7 @@
 $(function(){
 
+
+
     $(document).ready(function() {
 
       var didScroll;
@@ -20,12 +22,12 @@ $(function(){
 
       function hasScrolled() {
           var st = $(this).scrollTop();
-          
+
           // Si el ancho del viewport es menor a 768px
           if (st > 768) {
             if(Math.abs(lastScrollTop - st) <= delta)
                 return;
-              
+
               // Si se hace scroll -> Afecta al Header
               if (st > lastScrollTop && st > navbarHeight){
                   // Si el menu está abierto
@@ -49,7 +51,7 @@ $(function(){
             // Se remueven las clases
             $('header').removeClass('fixed-header outUp inDown');
           }
-          
+
           lastScrollTop = st;
       }
 
@@ -118,17 +120,25 @@ $(function(){
 
       });
 
+
       $('.radio-select').on( 'change', function() {
         if ( $('#radio-persona').is(':checked') ) {
           $('.if-empresa').removeClass('hide');
           $('.if-persona').addClass('hide');
+
         }
         if ( $('#radio-empresa').is(':checked') ) {
+
           $('.if-empresa').addClass('hide');
           $('.if-persona').removeClass('hide');
+
+
+
         }
       } )
 
     });
-  
-  });
+
+    });
+
+

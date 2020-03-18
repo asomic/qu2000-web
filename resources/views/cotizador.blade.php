@@ -105,13 +105,12 @@
                                     <input type="radio" name="type_client" class="radio-select" id="radio-empresa" value="persona">
                                     <span>Persona</span>
                                 </label>
-
                             </div>
                              <!-- If Empresa -->
                              <div class="if-empresa hide">
                                 <div class="item nombre-empresa">
                                     <label for="">Empresa</label>
-                                    <input type="text" name="company" placeholder="Ingrese el nombre de la empresa"  >
+                                    <input type="text" name="company" placeholder="Ingrese el nombre de la empresa" >
                             </div>
                             </div>
                             <div class="item rut-empresa">
@@ -125,8 +124,6 @@
 
                             <!-- If Persona -->
                             <div class="if-persona">
-
-
                             </div>
                             <div class="item detalle">
                                 <label for="">Detalle (Opcional)</label>
