@@ -45,18 +45,43 @@ class CatalogoController extends Controller
         ]);
 
     }
-
-
-
-
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function array($id)
     {
+
+        $products = Product::where('id', (int)$id)->get();
+
+
+        return view('cotizador')->with([
+            'products'=>$products
+
+
+
+        ]);
+
+
+        // $session = array_add($array, $products, 'id');
+
         //
+
+
+        // $value = $request->session()->get('key');
+
+
+
+
+
+
+
+        //
+
+//    return $request->sesssion()->all();
+
+
     }
 
     /**

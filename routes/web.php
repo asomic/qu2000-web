@@ -8,6 +8,9 @@ Route::get('catalogo', 'CatalogoController@index');
 
 Route::get('catalogo/{category_id}', 'CatalogoController@shearch');
 
+
+Route::get('sessioncatalogo/{id}', 'CatalogoController@array');
+
 Route::post('/enviado', 'MailController@sendmail')->name('ruta');
 
 Route::post('/enviadoM', 'MailControllerMayorista@sendmail')->name('rutam');
@@ -42,4 +45,19 @@ Route::get('cotizador', function () {
 Route::get('item', function () {
     return view('item');
 })->name('item');
+
+// Session
+Route::get('SessionCotizardor', function () {
+    // Recupera un dato de  la session en este caso una key
+    $value = session('key');
+
+
+    // Se le designa un valor por defecto...
+    $value = session('key', 'default');
+
+    // Guarda un dato en la sesion...
+    session(['key' => 'value']);
+
+});
+
 

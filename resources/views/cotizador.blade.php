@@ -9,56 +9,26 @@
                     <div class="cot-productos">
                         <h3>Productos</h3>
 
-                        <!-- Item -->
+
+                         @foreach ($products as $product)
+                        <a href="{{ url('cotizador/'. $product->id)}}"></a>
+                        @endforeach
+
                         <div class="item">
-                            <div class="img"></div>
+                            <div class="img" style="background-image: url('{{ $product->image }}')"></div></a>
                             <div class="data">
                                 <a href="{{ asset('/item') }}">
-                                    <h5>Shampoo 400 Ml. Pantene</h5>
+                                    <h5> {{ $product->name }}</h5>
                                 </a>
-                                <p class="text-detail">
-                                    COD: B108Q
-                                </p>
+                                <p class="detail">COD: {{ $product->code }}</p>
                             </div>
-                            <div class="modify">
+                     <div class="modify">
                                 <input id="quantity" type="number" value="1" min="1" class="quantity">
                                 <a href="#"><img src="{{asset('/images/icon-trash.png')}}"></a>
                             </div>
                         </div>
 
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="img"></div>
-                            <div class="data">
-                                <a href="{{ asset('/item') }}">
-                                    <h5>Cloro Gel 5 Lts QU2000</h5>
-                                </a>
-                                <p class="text-detail">
-                                    COD: B108Q
-                                </p>
-                            </div>
-                            <div class="modify">
-                                <input id="quantity" type="number" value="1" min="1" class="quantity">
-                                <a href="#"><img src="{{asset('/images/icon-trash.png')}}"></a>
-                            </div>
-                        </div>
 
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="img"></div>
-                            <div class="data">
-                                <a href="{{ asset('/item') }}">
-                                    <h5>Shampoo 400 Ml. Pantene</h5>
-                                </a>
-                                <p class="text-detail">
-                                    COD: B108Q
-                                </p>
-                            </div>
-                            <div class="modify">
-                                <input id="quantity" type="number" value="1" min="1" class="quantity">
-                                <a href="#"> <img src="{{asset('/images/icon-trash.png')}}"></a>
-                            </div>
-                        </div>
 
                     </div>
                 </section>

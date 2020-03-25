@@ -24,7 +24,7 @@
                             <label for="quantity">
                                 <input id="quantity" type="number" value="1" min="1" class="quantity">
                             </label>
-                            <a class="button add" href="#">Agregar al Cotizador</a>
+                            <a class="button add"  >Agregar al Cotizador</a>
                         </div>
                     </div>
                 </div>
