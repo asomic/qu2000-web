@@ -35,7 +35,8 @@
                                     </a>
                                     <p class="detail">COD: {{ $product->code }}</p>
                                 </div>
-                                <a class="button add" href="/">Agregar al Cotizador</a>
+                                <a class="button add"  name="sumit" type="sumit" href="">Agregar al Cotizador</a>
+
                             </div>
 @endforeach
 

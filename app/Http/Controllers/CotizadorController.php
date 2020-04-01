@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
-use Illuminate\Http\Request;
-use Session;
 
-class HomeController extends Controller
+
+use App\Product;
+use App\Category;
+use Illuminate\Http\Request;
+
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +17,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $products = Product::where('featured', true)->take(6)->get();
-
-        return view('index')->with('products', $products);
+        //
     }
 
     /**
@@ -40,18 +40,7 @@ class HomeController extends Controller
     {
         //
     }
-    // public function sessionhome(Request $request, $id)
-    // {
-    //     $products = Product::find($id);
-     
-    //     Session::put(  ['products', $products
-    // ]);
-       
-    //     return redirect('/');  
-       
 
-       
-    // }
     /**
      * Display the specified resource.
      *

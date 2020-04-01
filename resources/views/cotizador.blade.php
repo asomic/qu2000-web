@@ -10,24 +10,42 @@
                         <h3>Productos</h3>
 
 
-                         @foreach ($products as $product)
-                        <a href="{{ url('cotizador/'. $product->id)}}"></a>
-                        @endforeach
+                      
+                   
 
                         <div class="item">
-                            <div class="img" style="background-image: url('{{ $product->image }}')"></div></a>
+                           <div>
+                                <h5> 
+                          {{ Session::get('products')}}
+                          {{-- @foreach (Session::get('products') as $item)
+
+                                    {{dd(Session::get('products',$products->name))}}
+
+                          @endforeach      --}}
+                          {{-- <div class="item">
+                            <a href="">
+                                <div class="img" style="background-image: url('{{ $products->image }}')"></div></a>
                             <div class="data">
                                 <a href="{{ asset('/item') }}">
-                                    <h5> {{ $product->name }}</h5>
+                                    <h5> {{ $products->name }}</h5>
                                 </a>
-                                <p class="detail">COD: {{ $product->code }}</p>
+                                <p class="detail">COD: {{ $products->code }}</p>
                             </div>
+                            
+                        </div> --}}
+
+                        
+
+                                </h5>
+                           </div> 
+                          
+
                      <div class="modify">
                                 <input id="quantity" type="number" value="1" min="1" class="quantity">
                                 <a href="#"><img src="{{asset('/images/icon-trash.png')}}"></a>
                             </div>
                         </div>
-
+                      
 
 
                     </div>

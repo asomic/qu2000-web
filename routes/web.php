@@ -6,10 +6,16 @@ Route::get('/', 'HomeController@index');
 
 Route::get('catalogo', 'CatalogoController@index');
 
-Route::get('catalogo/{category_id}', 'CatalogoController@shearch');
+Route::get('catalogo/{id}', 'CatalogoController@shearch');
 
 
-Route::get('sessioncatalogo/{id}', 'CatalogoController@array');
+Route::get('sessioncatalogo/{id}', 'CatalogoController@sessionOBjeto');
+
+
+// Route::get('sessionhome/{id}', 'HomeController@sessionhome');
+
+
+
 
 Route::post('/enviado', 'MailController@sendmail')->name('ruta');
 
@@ -21,6 +27,8 @@ Route::post('/enviadoC', 'MailControllerCotizador@mail')->name('rutac');
 // Route::get('/', function () {
 //     return view('inicio');
 // });
+
+
 
 Route::get('nosotros', function () {
     return view('nosotros');
@@ -52,6 +60,7 @@ Route::get('SessionCotizardor', function () {
     $value = session('key');
 
 
+
     // Se le designa un valor por defecto...
     $value = session('key', 'default');
 
@@ -61,3 +70,12 @@ Route::get('SessionCotizardor', function () {
 });
 
 
+
+
+// Definicion y funcionalidades :
+// se cargar con el framework, son las url de entradas de la aplicacion
+// definir rut cuando entramos a  algun citio  www.misitio.com/contacto = 
+// Route::get('contacto',function(){ 
+// });
+// Lo que escribamos dentro de la funcion es lo que vera el usuario. siempre y cuando al final
+// le damos un return  

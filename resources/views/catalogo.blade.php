@@ -18,8 +18,6 @@
                             @foreach ($categories as $category)
                             <a href="{{ url('catalogo/' . $category->id)}}">{{ $category->name }}</a>
                     @endforeach
-
-
                         </nav>
                     </div>
                 </div>
@@ -37,10 +35,8 @@
                     <div class="grid-productos-wrapper-inner">
                         <!-- <h1>Productos Destacados</h1> -->
                         <div class="grid-productos">
-
-
-
 @foreach ($products as $product)
+
 
                         <div class="item">
                             <a href="">
@@ -51,10 +47,13 @@
                                 </a>
                                 <p class="detail">COD: {{ $product->code }}</p>
                             </div>
-                            <a class="button add"  href="{{ url('sessioncatalogo/' . $product->id)}}">Agregar al Cotizador</a>
+                            <a class="button add"  name="sumit" type="sumit" href="{{ url('sessioncatalogo/' . $product->id)}}">Agregar al Cotizador</a>
 
                         </div>
 @endforeach
+
+           
+
                         </div>
                     </div>
 

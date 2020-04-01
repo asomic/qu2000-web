@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Product;
 use App\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
+use Session;
 
 class CatalogoController extends Controller
 {
@@ -50,38 +52,19 @@ class CatalogoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function array($id)
+    public function sessionOBjeto(Request $request, $id)
     {
+        $products = Product::find($id);
+   
+        Session::put(  ['products' => $products
+                          ]);
+      
+      
+        
+        return redirect('/catalogo');  
+       
 
-        $products = Product::where('id', (int)$id)->get();
-
-
-        return view('cotizador')->with([
-            'products'=>$products
-
-
-
-        ]);
-
-
-        // $session = array_add($array, $products, 'id');
-
-        //
-
-
-        // $value = $request->session()->get('key');
-
-
-
-
-
-
-
-        //
-
-//    return $request->sesssion()->all();
-
-
+       
     }
 
     /**
@@ -90,10 +73,14 @@ class CatalogoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+    // public function add(Product $product)
+    // {
+    //     $cart = \Session::get('cart');
+    //     $product->quantity = 1;
+    //     $cart[$products->id] = $product
+    //     \Session::put('cart', $cart);
+    //     return redirect()->route('/catalogo');/
+    // }
 
     /**
      * Display the specified resource.
@@ -101,10 +88,10 @@ class CatalogoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+    // public function _contruct()
+    // {
+    //     if(!\Session::has('cart')) \Session::put('cart', array());
+    // }
 
     /**
      * Show the form for editing the specified resource.
@@ -137,6 +124,6 @@ class CatalogoController extends Controller
      */
     public function destroy($id)
     {
-        //
+      
     }
 }
