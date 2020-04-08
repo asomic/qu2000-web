@@ -9,45 +9,44 @@
                     <div class="cot-productos">
                         <h3>Productos</h3>
 
+                
+                        @if (session()->has('user.products'))
+                            
+                          @foreach (Session::get('user.products') as $item)
 
-                      
-                   
-
-                        <div class="item">
-                           <div>
-                                <h5> 
-                          {{ Session::get('products')}}
-                          {{-- @foreach (Session::get('products') as $item)
-
-                                    {{dd(Session::get('products',$products->name))}}
-
-                          @endforeach      --}}
-                          {{-- <div class="item">
+                          <div class="item">
                             <a href="">
-                                <div class="img" style="background-image: url('{{ $products->image }}')"></div></a>
+                                <div class="img" style="background-image: url('{{ $item->image }}')"></div></a>
                             <div class="data">
                                 <a href="{{ asset('/item') }}">
-                                    <h5> {{ $products->name }}</h5>
+                                    <h5> {{ $item->name }}</h5>
                                 </a>
-                                <p class="detail">COD: {{ $products->code }}</p>
+                                <p class="detail">COD: {{ $item->code }}</p>
+                                
                             </div>
-                            
-                        </div> --}}
-
-                        
-
-                                </h5>
-                           </div> 
-                          
-
-                     <div class="modify">
+                           
+                           
+                           <div class="modify">
                                 <input id="quantity" type="number" value="1" min="1" class="quantity">
-                                <a href="#"><img src="{{asset('/images/icon-trash.png')}}"></a>
-                            </div>
+                                <a   name="sumit" type="sumit" href="{{ url('deleteObjeto/' . $item->id)}}"><img src="{{asset('/images/icon-trash.png')}}"></a>
+                  
+                           </div>
+                            
                         </div>
+                                   
+                          @endforeach 
+
+                        @else
+                        <br>
+                        <br>
+
+                        <h4>No hay Productos en el Carrito</h4>                            
+                        @endif
                       
-
-
+                        
+                                
+                           
+                 
                     </div>
                 </section>
 

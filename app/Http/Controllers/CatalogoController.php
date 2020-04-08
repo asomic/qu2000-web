@@ -52,19 +52,45 @@ class CatalogoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function sessionOBjeto(Request $request, $id)
+    public function sessionCarrito(Request $request, $id)
     {
+        session_start(); //Se inicia la sesion 
         $products = Product::find($id);
-   
-        Session::put(  ['products' => $products
-                          ]);
-      
-      
+
         
+        $request->session()->push('user.products', $products); 
+ 
         return redirect('/catalogo');  
        
 
-       
+        
+    }
+
+    public function deleteObjeto(Request $request,$id)
+    {
+
+
+        session_start(); 
+        //Capturamos el id de la pagina
+        $products = Product::where('id', '=', $id)->get();
+        //Guardamos en una variable values
+        // el parametro que queremos
+        //eliminar de user.products que se 
+        //encuentra en la session 
+
+        //Como poner condicion para eliminar la variable que capturamos
+        $value = $request->session()->pull('user.products');
+
+        dd($value);
+        //redireccionamos a la pagina
+
+        //Se mandara con algo para actualizar la lista ?
+        return redirect('/cotizador');
+        
+
+
+        
+      
     }
 
     /**
@@ -122,8 +148,5 @@ class CatalogoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-      
-    }
+ 
 }

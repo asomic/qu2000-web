@@ -47,10 +47,12 @@
                                 </a>
                                 <p class="detail">COD: {{ $product->code }}</p>
                             </div>
-                            <a class="button add"  name="sumit" type="sumit" href="{{ url('sessioncatalogo/' . $product->id)}}">Agregar al Cotizador</a>
+                            <a class="button add"  name="sumit" type="sumit" href="{{ url('obteneridProducto/' . $product->id)}}">Agregar al Cotizador</a>
 
                         </div>
 @endforeach
+
+                        
 
            
 

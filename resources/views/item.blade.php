@@ -25,7 +25,7 @@
                                 <input id="quantity" type="number" value="1" min="1" class="quantity">
                             </label>
                                  <a href="#"><img src="{{asset('/images/icon-trash.png')}}"></a>
-                                 <a class="button add"  name="sumit" type="sumit" href="{{ url('sessionhome/' . $product->id)}}">Agregar al Cotizador</a>
+                                 <a class="button add"  name="sumit" type="sumit" href="">Agregar al Cotizador</a>
 
                         </div>
                     </div>
