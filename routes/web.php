@@ -24,7 +24,7 @@ Route::get('obtenerProductoitem/{id}','ItemController@agregarCarrito');
 
 
 
-Route::get('deleteObjeto/{id}','CatalogoController@agregarCarrito');
+Route::get('deleteObjeto/{id}','CotizadorController@deleteObjeto');
 
 
 

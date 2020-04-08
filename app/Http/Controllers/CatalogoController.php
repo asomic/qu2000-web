@@ -65,38 +65,15 @@ class CatalogoController extends Controller
 
         
     }
-    
+
     public function verDetalle(Request $request , $id)
     {
         $products = Product::where('id',$id)->get()->all();
         return view('/item')->with('products', $products);
 }
+    
 
 
-    public function deleteObjeto(Request $request,$id)
-    {
-
-
-        session_start(); 
-        //Capturamos el id de la pagina
-        $products = Product::where('id', '=', $id)->get();
-        //Guardamos en una variable values
-        // el parametro que queremos
-        //eliminar de user.products que se 
-        //encuentra en la session 
-
-        //Como poner condicion para eliminar la variable que capturamos
-        $value = $request->session()->pull('user.products');
-
-
-        //Se mandara con algo para actualizar la lista ?
-        return redirect('/cotizador');
-        
-
-
-        
-      
-    }
 
   
 //     public function verProducto(Request $request , $id)
