@@ -52,7 +52,7 @@ class CatalogoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function sessionCarrito(Request $request, $id)
+    public function agregarCarrito(Request $request, $id)
     {
         session_start(); //Se inicia la sesion 
         $products = Product::find($id);
@@ -60,11 +60,18 @@ class CatalogoController extends Controller
         
         $request->session()->push('user.products', $products); 
  
-        return redirect('/catalogo');  
+        return redirect('/catalogo');
        
 
         
     }
+    
+    public function verDetalle(Request $request , $id)
+    {
+        $products = Product::where('id',$id)->get()->all();
+        return view('/item')->with('products', $products);
+}
+
 
     public function deleteObjeto(Request $request,$id)
     {
@@ -81,8 +88,6 @@ class CatalogoController extends Controller
         //Como poner condicion para eliminar la variable que capturamos
         $value = $request->session()->pull('user.products');
 
-        dd($value);
-        //redireccionamos a la pagina
 
         //Se mandara con algo para actualizar la lista ?
         return redirect('/cotizador');
@@ -93,6 +98,12 @@ class CatalogoController extends Controller
       
     }
 
+  
+//     public function verProducto(Request $request , $id)
+//     {
+//         $products = Product::find($id)->get();
+//         return view('/item')->with('products', $products);
+// }
     /**
      * Store a newly created resource in storage.
      *

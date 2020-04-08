@@ -18,7 +18,7 @@
                             <a href="">
                                 <div class="img" style="background-image: url('{{ $item->image }}')"></div></a>
                             <div class="data">
-                                <a href="{{ asset('/item') }}">
+                                <a  href="{{ url('item/' . $item->id)}}">
                                     <h5> {{ $item->name }}</h5>
                                 </a>
                                 <p class="detail">COD: {{ $item->code }}</p>

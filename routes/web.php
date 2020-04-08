@@ -4,16 +4,28 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index');
 
+Route::get('item/{id}', 'ItemController@verDetalle');
+Route::get('item/{id}', 'HomeController@verDetalle');
+Route::get('item/{id}', 'CatalogoController@verDetalle');
+
 Route::get('catalogo', 'CatalogoController@index');
 
 Route::get('catalogo/{id}', 'CatalogoController@shearch');
 
 
 
-Route::get('obteneridProducto/{id}', 'CatalogoController@sessionCarrito');
 
 
-Route::get('deleteObjeto/{id}','CatalogoController@deleteObjeto');
+Route::get('obtenerProductocatalogo/{id}', 'CatalogoController@agregarCarrito');
+
+Route::get('obtenerProductoindex/{id}','HomeController@agregarCarrito');
+
+Route::get('obtenerProductoitem/{id}','ItemController@agregarCarrito');
+
+
+
+Route::get('deleteObjeto/{id}','CatalogoController@agregarCarrito');
+
 
 
 

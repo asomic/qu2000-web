@@ -42,12 +42,12 @@
                             <a href="">
                                 <div class="img" style="background-image: url('{{ $product->image }}')"></div></a>
                             <div class="data">
-                                <a href="{{ asset('/item') }}">
+                                <a  href="{{ url('item/' . $product->id)}}">
                                     <h5> {{ $product->name }}</h5>
                                 </a>
                                 <p class="detail">COD: {{ $product->code }}</p>
                             </div>
-                            <a class="button add"  name="sumit" type="sumit" href="{{ url('obteneridProducto/' . $product->id)}}">Agregar al Cotizador</a>
+                            <a class="button add"  name="sumit" type="sumit" href="{{ url('obtenerProductocatalogo/' . $product->id)}}">Agregar al Cotizador</a>
 
                         </div>
 @endforeach
