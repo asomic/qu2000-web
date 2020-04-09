@@ -52,6 +52,8 @@ class CatalogoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function agregarCarrito(Request $request, $id)
     {
         session_start(); //Se inicia la sesion 
@@ -65,6 +67,10 @@ class CatalogoController extends Controller
 
         
     }
+
+
+
+
 
     public function verDetalle(Request $request , $id)
     {
