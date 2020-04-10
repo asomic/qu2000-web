@@ -47,5 +47,42 @@ class CatalogoController extends Controller
         ]);
 
     }
+<<<<<<< HEAD
+=======
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+
+    public function agregarCarrito(Request $request, $id)
+    {
+        session_start(); //Se inicia la sesion 
+        $products = Product::find($id);
+
+        
+        $request->session()->push('user.products', $products); 
+ 
+        return redirect('/catalogo');
+       
+
+        
+    }
+
+
+
+
+
+    public function verDetalle(Request $request , $id)
+    {
+        $products = Product::where('id',$id)->get()->all();
+        return view('/item')->with('products', $products);
+}
+    
+
+
+
+>>>>>>> 780fe83afad6ad268b16128e91419edcdd2af85a
   
 } 

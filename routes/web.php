@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index');
 
+<<<<<<< HEAD
 Route::get('catalogo', 'CatalogoController@index');
 Route::get('catalogo/{id}', 'CatalogoController@shearch');
 
@@ -13,6 +14,35 @@ Route::get('item/{id}/add', 'ItemController@add')->name('items.add');
 // Route::get('item/{id}/addq', 'ItemController@addq')->name('items.addq');
 Route::get('item/{id}/remove', 'ItemController@delete')->name('items.remove');
 Route::get('item/{id}/update', 'ItemController@update')->name('items.update');
+=======
+///como funciona esto !!!! la misma ruta diferente controladores ??? como sabe a cual ir?
+Route::get('item/{id}', 'ItemController@verDetalle');
+Route::get('item/{id}', 'HomeController@verDetalle');
+Route::get('item/{id}', 'CatalogoController@verDetalle');
+
+
+
+Route::get('catalogo', 'CatalogoController@index');
+Route::get('catalogo/{id}', 'CatalogoController@shearch');
+
+
+
+
+/// hacen lo mismo todas estas rutas !!
+Route::get('obtenerProductocatalogo/{id}', 'CatalogoController@agregarCarrito');
+Route::get('obtenerProductoindex/{id}','HomeController@agregarCarrito');
+Route::get('obtenerProductoitem/{id}','ItemController@agregarCarrito');
+
+//solo esta ruta basta!
+Route::get('item/{id}/add', 'ItemController@add')->name('items.add');
+Route::get('item/{id}/remove', 'ItemController@delete')->name('items.remove');
+Route::get('item/{id}/update', 'ItemController@update')->name('items.update');
+
+
+
+Route::get('deleteObjeto/{id}','CotizadorController@deleteObjeto');
+
+>>>>>>> 780fe83afad6ad268b16128e91419edcdd2af85a
 
 
 
