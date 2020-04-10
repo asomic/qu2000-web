@@ -31,11 +31,12 @@
                                     <a  href="{{ url('item/' . $product->id)}}">
                                         <h5> {{ $product->name }}</h5>
                                     </a>
+
                                     <p class="detail">COD: {{ $product->code }}</p>
                                 </div>
-                        
-                                <a class="button add"  name="sumit" type="sumit" href="{{ url('obtenerProductoindex/' . $product->id)}}">Agregar al Cotizador</a>
-
+                                {{-- <a> nunca a  tenido submit!! compy & paste?  --}}
+                                {{-- <a class="button add"  name="sumit" type="sumit" href="{{ url('obtenerProductoindex/' . $product->id)}}">Agregar al Cotizador</a> --}}
+                                <a class="button add"  href="{{ route('items.add',['id'=>$product->id])}}">Agregar al Cotizador</a>
                             </div>
 @endforeach
 

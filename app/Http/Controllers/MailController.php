@@ -12,7 +12,7 @@ use Validator;
 
 class MailController extends Controller
 {
-    public function sendmail(Request $request)
+    public function mailContacto(Request $request)
     {
 
 //  dd($request->input());
@@ -32,4 +32,38 @@ class MailController extends Controller
 
     }
 
+    public function mailCotizador(Request $request)
+    {
+
+      Mail::to("trindamorales@gmail.com")->send(new ContactMailCotizador($request->input()));
+
+
+      if (Mail::failures()) {
+
+      return response('fallo',500);
+      }
+      else {
+
+        return response('logro',200);
+      }
+
+
+    }
+    public function mailMayorista(Request $request)
+    {
+
+      Mail::to("trindamorales@gmail.com")->send(new ContactMailMayorista($request->input()));
+
+
+      if (Mail::failures()) {
+
+      return response('fallo',500);
+      }
+      else {
+
+        return response('logro',200);
+      }
+
+
+    }
 }

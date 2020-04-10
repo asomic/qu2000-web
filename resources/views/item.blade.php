@@ -7,38 +7,40 @@
             <div class="item-wrapper pd-lr">
 
                 
-                @foreach ($products as $products)
+                @foreach ($product as $product)
                 <div class="item">
                     <div class="item-img">
                         <a href="">
                             </a>
-                        
-                    </div>
+                      </div>
                     <div class="data">
                         <div class="breadcrumb">
                             <a href="{{ asset('/catalogo') }}">Productos</a>
                             <span>></span>
                             <a href="{{ asset('/catalogo') }}">Limpieza</a>
                         </div>
-                        <h4> {{ $products->name }}</h4>
+                        <h4> {{ $product->name }}</h4>
                         <p class="text-detail">
                            
-                       <p class="detail">COD: {{ $products->code }}</p><br>
+                       <p class="detail">COD: {{ $product->code }}</p><br>
                         </p>
                         <p class="unico">
                             Proin urna urna, aliquet ac scelerisque at, aliquet vel purus. Morbi malesuada et libero sed porttitor. Integer eu leo nec neque iaculis ornare quis nec nulla. Duis odio tellus, faucibus id ex non, euismod tempor nunc. Phasellus nec felis eros. Duis sed convallis odio.
                         </p>
                         <div class="add-cotz">
                             <label for="quantity">
-                                <input id="quantity" type="number" value="1" min="1" class="quantity">
+                                <input id="quantity" name="quantity" type="number" value="1" min="1" class="quantity">
+                                
                             </label>
                                  <a href="#"><img src="{{asset('/images/icon-trash.png')}}"></a>
-                                 <a class="button add"  name="sumit" type="sumit" href="{{ url('obtenerProductoitem/' . $products->id)}}">Agregar al Cotizador</a>
-                  
+                                 <a class="button add"  href="{{ route('items.add',['id'=>$product->id])}}">Agregar al Cotizador</a>
+                       
                         </div>
-                    </div>
+                    </div> 
+                     @endforeach
                 </div>
-                @endforeach
+
+
 {{-- 
 
                 @foreach ($products as $products)

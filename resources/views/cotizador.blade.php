@@ -10,28 +10,29 @@
                         <h3>Productos</h3>
 
                 
-                        @if (session()->has('user.products'))
+                        @if (session()->has('itemList') && Session::get('itemList')!=[])
                             
-                          @foreach (Session::get('user.products') as $item)
-
+                          @foreach (Session::get('itemList') as $item)
+                        
+                           {{-- ahora trabajamos con un array no un objeto --}}
                           <div class="item">
                             <a href="">
-                                <div class="img" style="background-image: url('{{ $item->image }}')"></div></a>
+                                <div class="img" style="background-image: url('{{ $item['product']['image'] }}')"></div></a>
                             <div class="data">
-                                <a  href="{{ url('item/' . $item->id)}}">
-                                    <h5> {{ $item->name }}</h5>
+                                <a  href="{{ url('item/' . $item['product']['id'] )}}">
+                                    <h5> {{ $item['product']['name'] }}</h5>
                                 </a>
-                                <p class="detail">COD: {{ $item->code }}</p>
-                                
+                                <p class="detail">COD: {{ $item['product']['code'] }}</p>
                             </div>
-                           
-                           
                            <div class="modify">
-                                <input id="quantity" type="number" value="1" min="1" class="quantity">
-                                <a   name="sumit" type="sumit" href="{{ url('deleteObjeto/' . $item->id)}}"><img src="{{asset('/images/icon-trash.png')}}"></a>
-                  
+                            <form action="{{route('items.update',['id'=>$item['product']['id']] )}}">
+                             
+                                @csrf
+                                <input id="quantity" name="quantity" type="number" value="{{$item['quantity']}}" min="1" class="quantity">
+                                <button type="submit" >update</button>
+                            </form>
+                                <a href="{{ route('items.remove',['id'=>$item['product']['id']])}}"><img src="{{asset('/images/icon-trash.png')}}"></a>
                            </div>
-                            
                         </div>
                                    
                           @endforeach 

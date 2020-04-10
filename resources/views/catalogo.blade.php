@@ -37,7 +37,6 @@
                         <div class="grid-productos">
 @foreach ($products as $product)
 
-
                         <div class="item">
                             <a href="">
                                 <div class="img" style="background-image: url('{{ $product->image }}')"></div></a>
@@ -47,14 +46,10 @@
                                 </a>
                                 <p class="detail">COD: {{ $product->code }}</p>
                             </div>
-                            <a class="button add"  name="sumit" type="sumit" href="{{ url('obtenerProductocatalogo/' . $product->id)}}">Agregar al Cotizador</a>
+                            <a class="button add"  href="{{ route('items.add',['id'=>$product->id])}}">Agregar al Cotizador</a>
 
                         </div>
 @endforeach
-
-                        
-
-           
 
                         </div>
                     </div>

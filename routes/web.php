@@ -4,37 +4,24 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index');
 
-Route::get('item/{id}', 'ItemController@verDetalle');
-Route::get('item/{id}', 'HomeController@verDetalle');
-Route::get('item/{id}', 'CatalogoController@verDetalle');
-
 Route::get('catalogo', 'CatalogoController@index');
-
 Route::get('catalogo/{id}', 'CatalogoController@shearch');
 
-
-
-
-
-Route::get('obtenerProductocatalogo/{id}', 'CatalogoController@agregarCarrito');
-
-Route::get('obtenerProductoindex/{id}','HomeController@agregarCarrito');
-
-Route::get('obtenerProductoitem/{id}','ItemController@agregarCarrito');
-
-
-
-Route::get('deleteObjeto/{id}','CotizadorController@deleteObjeto');
-
+//solo esta ruta basta!
+Route::get('item/{id}', 'ItemController@detalle');
+Route::get('item/{id}/add', 'ItemController@add')->name('items.add');
+// Route::get('item/{id}/addq', 'ItemController@addq')->name('items.addq');
+Route::get('item/{id}/remove', 'ItemController@delete')->name('items.remove');
+Route::get('item/{id}/update', 'ItemController@update')->name('items.update');
 
 
 
 // Email
-Route::post('/enviado', 'MailController@sendmail')->name('ruta');
+Route::post('/enviado', 'MailController@mailContacto')->name('ruta');
 
-Route::post('/enviadoM', 'MailControllerMayorista@sendmail')->name('rutam');
+Route::post('/enviadoM', 'MailController@mailMayorista')->name('rutam');
 
-Route::post('/enviadoC', 'MailControllerCotizador@mail')->name('rutac');
+Route::post('/enviadoC', 'MailController@mailCotizador')->name('rutac');
 
 
 // Route::get('/', function () {
