@@ -11,7 +11,7 @@ $factory->define(Product::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'description' => $faker->text,
-        'image' => $faker->imageUrl($width =  320, $height = 240, 'food'),
+        'image' => $faker->image('/image/logo.png',$width =  320, $height = 240),
         'featured' =>$faker->boolean(15),
         'code' => Str::random(6),
         'category_id' => Category::all()->random()->id ?? 1,
