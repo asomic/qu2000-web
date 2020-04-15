@@ -19,3 +19,11 @@
     <p>Telefono: {{$datacotizador['phone']}}</p>
     <p>Detalle : {{$datacotizador['message']}}</p>
 
+    <p>Producto/s</p>
+        @foreach (Session::get('itemList') as $item)       
+    <p>Nombre: {{$datacotizador['nameproduct']}}</p>
+    <p>Codigo: {{$datacotizador['codeproduct']}}</p>
+    <p>Cantidad: {{$datacotizador['quantityproduct']}}</p>
+   
+
+    @endforeach 

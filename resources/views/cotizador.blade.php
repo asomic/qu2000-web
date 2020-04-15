@@ -42,11 +42,6 @@
 
                         <h4>No hay Productos en el Carrito</h4>                            
                         @endif
-                      
-                        
-                                
-                           
-                 
                     </div>
                 </section>
 
@@ -56,6 +51,15 @@
                         <h3>Cotizador</h3>
                         <form action="{{route('rutac')}}" method="POST">
                             @csrf
+                            @foreach (Session::get('itemList') as $item)
+          <div>
+            <input type="hidden" name="nameproduct" value="{{ $item['product']['name'] }}" >
+            <input type="hidden" name="codeproduct" value="  {{ $item['product']['code'] }}" >
+            <input type="hidden" name="quantityproduct" value="{{ $item['quantity'] }}" >
+         </div>
+          
+                        @endforeach 
+
                             <div class="item nombre">
                                 <label for="">Nombre</label>
                                 <input type="text" name="name" placeholder="Ingrese su nombre">

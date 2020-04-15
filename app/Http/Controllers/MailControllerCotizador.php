@@ -4,22 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\ContactMail;
+use App\Mail\ContactMailCotizador;
 use Redirect;
 use Session;
 use App\Http\Requests\ContactRequest;
 use Validator;
 
-class MailController extends Controller
+class MailControllerCotizador extends Controller
 {
-    public function sendmail(Request $request)
+    public function mail(Request $request)
     {
 
-//  dd($request->input());
-
-      Mail::to("trindamorales@gmail.com")->send(new ContactMail($request->input()));
-
-      
+      Mail::to("trindamorales@gmail.com")->send(new ContactMailCotizador($request->input()));
 
 
       if (Mail::failures()) {

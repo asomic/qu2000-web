@@ -14,11 +14,11 @@ Route::get('item/{id}/add', 'ItemController@add')->name('items.add');
 Route::get('item/{id}/remove', 'ItemController@delete')->name('items.remove');
 Route::get('item/{id}/update', 'ItemController@update')->name('items.update');
 // Email
-Route::post('/enviado', 'MailController@mailContacto')->name('ruta');
+Route::post('/enviado', 'MailController@sendmail')->name('ruta');
 
-Route::post('/enviadoM', 'MailController@mailMayorista')->name('rutam');
+Route::post('/enviadoM', 'MailControllerMayorista@sendmail')->name('rutam');
 
-Route::post('/enviadoC', 'MailController@mailCotizador')->name('rutac');
+Route::post('/enviadoC', 'MailControllerCotizador@mail')->name('rutac');
 
 
 // Route::get('/', function () {
