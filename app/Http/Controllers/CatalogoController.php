@@ -47,3 +47,4 @@ class CatalogoController extends Controller
         ]);
 
     }
+}

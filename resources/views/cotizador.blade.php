@@ -13,7 +13,11 @@
                         @if (session()->has('itemList') && Session::get('itemList')!=[])
                             
                           @foreach (Session::get('itemList') as $item)
-
+                       
+                           {{-- ahora trabajamos con un array no un objeto --}}
+                          <div class="item">
+                            <a href="">
+                                <div class="img" style="background-image: url('{{ $item['product']['image'] }}')"></div></a>
                             <div class="data">
                                 <a  href="{{ url('item/' . $item['product']['id'] )}}">
                                     <h5> {{ $item['product']['name'] }}</h5>
@@ -21,6 +25,9 @@
                                 <p class="detail">COD: {{ $item['product']['code'] }}</p>
                             </div>
                            <div class="modify">
+                            <form action="{{route('items.update',['id'=>$item['product']['id']])}}">
+                                @csrf
+                                <input id="quantity" type="number" name="quantity" value="{{$item['quantity']}}" min="1" class="quantity">
                                 <button type="submit" >update</button>
                             </form>
                                 <a href="{{ route('items.remove',['id'=>$item['product']['id']])}}"><img src="{{asset('/images/icon-trash.png')}}"></a>
@@ -35,6 +42,10 @@
 
                         <h4>No hay Productos en el Carrito</h4>                            
                         @endif
+                      
+                        
+                                
+                           
                  
                     </div>
                 </section>
