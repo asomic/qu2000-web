@@ -17,3 +17,4 @@ $factory->define(Product::class, function (Faker $faker) {
         'category_id' => Category::all()->random()->id ?? 1,
     ];
 });
++

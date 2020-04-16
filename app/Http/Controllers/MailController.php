@@ -28,7 +28,7 @@ class MailController extends Controller
       }
       else {
 
-        return response('logro',200);
+        return response('Se a enviado tus datos con exito',200);
       }
 
 

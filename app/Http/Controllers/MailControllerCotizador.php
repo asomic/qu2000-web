@@ -20,11 +20,11 @@ class MailControllerCotizador extends Controller
 
       if (Mail::failures()) {
 
-      return response('fallo',500);
+      return response('Error, revisar ',500);
       }
       else {
 
-        return response('logro',200);
+        return response('Tus productos se enviaron correctamente',200);
       }
 
 

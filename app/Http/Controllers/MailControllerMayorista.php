@@ -20,11 +20,11 @@ class MailControllerMayorista extends Controller
 
       if (Mail::failures()) {
 
-      return response('fallo',500);
+      return response('Algo salio mal !',500);
       }
       else {
 
-        return response('logro',200);
+        return response('Tus datos se enviaron correctamente ',200);
       }
 
 
