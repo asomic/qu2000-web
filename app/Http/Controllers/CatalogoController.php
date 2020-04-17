@@ -16,7 +16,7 @@ class CatalogoController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
-     */
+     *///comentado
     // public function index()
     // {
     //     // $products = Product::paginate(9);
