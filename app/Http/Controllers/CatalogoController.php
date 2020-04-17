@@ -19,7 +19,7 @@ class CatalogoController extends Controller
      *///comentado
     public function index()
     {
-        $products = Product::paginate();     
+        $products = Product::paginate(6);     
         $categories = Category::all();    
         return view('catalogo')->with([
             'products'=>$products,
