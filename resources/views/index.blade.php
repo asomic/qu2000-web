@@ -25,7 +25,7 @@
 @foreach ($products as $product)
     <!-- Item -->
                             <div class="item">
-                                <a href="">
+                                <a href="{{ url('item/' . $product->id)}}">
                                     <div class="img" style="background-image: url('{{ $product->image }}')"></div></a>
                                 <div class="data">
                                     <a  href="{{ url('item/' . $product->id)}}">
@@ -39,8 +39,6 @@
                                 <a class="button add"  href="{{ route('items.add',['id'=>$product->id])}}">Agregar al Cotizador</a>
                             </div>
 @endforeach
-
-
 
                         </div>
                     </div>

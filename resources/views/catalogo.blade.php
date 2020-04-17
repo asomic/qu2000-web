@@ -39,7 +39,7 @@
 @foreach ($products as $product)
 
                         <div class="item">
-                            <a href="">
+                            <a href="{{ url('item/' . $product->id)}}">
                                 <div class="img" style="background-image: url('{{ $product->image }}')"></div></a>
                             <div class="data">
                                 <a  href="{{ url('item/' . $product->id)}}">
