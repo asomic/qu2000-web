@@ -18,6 +18,7 @@
                             @foreach ($categories as $category)
                             <a href="{{ url('catalogo/' . $category->id)}}">{{ $category->name }}</a>
                     @endforeach
+              
                         </nav>
                     </div>
                 </div>
@@ -62,9 +63,7 @@
                         <div class="pagination pd-b">
                             <div class="info">
                                 <!-- <p>Mostrando todos los artículos</p> -->
-                                <p class="info-text">
-                                    Mostrando 9 de 200 Productos
-                                </p>
+                              
                               
                                 <div class="pages">
                                     

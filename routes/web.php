@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index');
 
 
-// Route::get('catalogo', 'CatalogoController@index');
+ Route::get('catalogo', 'CatalogoController@index');
 
 Route::get('catalogo/{id}', 'CatalogoController@shearch');
 

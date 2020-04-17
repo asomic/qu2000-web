@@ -17,18 +17,16 @@ class CatalogoController extends Controller
      *
      * @return \Illuminate\Http\Response
      *///comentado
-    // public function index()
-    // {
-    //     // $products = Product::paginate(9);
-    //     $products = Product::where('feature',true)->get();
-    //     $categories = Category::all();    
-
-    //     return view('catalogo')->with([
-    //         'products'=>$products,
-    //         'categories'=>$categories
+    public function index()
+    {
+        $products = Product::paginate();     
+        $categories = Category::all();    
+        return view('catalogo')->with([
+            'products'=>$products,
+            'categories'=>$categories
            
-    //     ]);
-    // }
+        ]);
+    }
  
   
 
