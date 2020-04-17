@@ -11,6 +11,7 @@
                 <div class="item">
                     <div class="item-img">
                         <a href="">
+                            <div class="img" style="background-image: url('{{ $product->image }}')"></div></a>
                             </a>
                       </div>
                     <div class="data">

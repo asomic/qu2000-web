@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Product;
 use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Session;
+use Illuminate\Pagination\Paginator;
 
 class CatalogoController extends Controller
 {
@@ -15,16 +17,20 @@ class CatalogoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $products = Product::where('featured', true)->take(6)->get();
-        $categories = Category::all();
+    // public function index()
+    // {
+    //     // $products = Product::paginate(9);
+    //     $products = Product::where('feature',true)->get();
+    //     $categories = Category::all();    
 
-        return view('catalogo')->with([
-            'products'=>$products,
-            'categories'=>$categories
-        ]);
-    }
+    //     return view('catalogo')->with([
+    //         'products'=>$products,
+    //         'categories'=>$categories
+           
+    //     ]);
+    // }
+ 
+  
 
 
     /**
@@ -38,13 +44,17 @@ class CatalogoController extends Controller
     public function shearch($id)
     {
 
-        $products = Product::where('category_id', (int)$id)->get();
+        $products = Product::where('category_id', (int)$id)->paginate(6);
         $categories = Category::all();
+     
         return view('catalogo')->with([
             'products'=>$products,
             'categories'=>$categories
+          
 
         ]);
 
     }
+
+
 }
