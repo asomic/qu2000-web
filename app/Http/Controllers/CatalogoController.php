@@ -10,6 +10,7 @@ use Illuminate\Support\Arr;
 use Session;
 use Illuminate\Pagination\Paginator;
 
+
 class CatalogoController extends Controller
 {
     /**

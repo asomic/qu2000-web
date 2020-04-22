@@ -53,8 +53,6 @@
                         </div> 
                       
  @endforeach
-
-        
                       
                         </div>
                     </div>
@@ -62,41 +60,45 @@
                     <div class="pagination-wrapper">
                         <div class="pagination pd-b">
                             <div class="info">
-                                <!-- <p>Mostrando todos los artículos</p> -->
-                              
-                              
-                                <div class="pages">
-                                    
-                             {{ $products->links()}}
-                                      
+                                                       
+                                <p class="info-text">
                                   
-                                    {{-- <a class="item selected">
-                                        1
-                                        </p>
-                                        <a class="item">
-                                            2
-                                        </a>
-                                        <a class="item">
-                                            3
-                                        </a>
-                                        <a class="item">
-                                            >
-                                        </a> --}}
-                                </div>
-    
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
+                                   Mostrando {{$products->lastItem()}}  de {{$products->total()}}
+                                   Productos
+                                </p>
 
-                
 
+                                <div class="pages">
+                                    <a class="item selected"> 
+                                       
+                                         
+                                   
+                                         </a> 
+                             
+                                         {{$products->links()}}  
+                                     
+                                    
+                                    {{-- 
+                                    <a class="item">
+                                        3
+                                    </a>
+                                    <a class="item">
+                                        >
+                                    </a> --}}
+                                    
+                                </div>  
+                     
+            
+                                
+              
+                                                             
+                     </div>
+                 </div>
                 </section>
                
            
         </div>
-
+    </div>
 
 
 @endsection
