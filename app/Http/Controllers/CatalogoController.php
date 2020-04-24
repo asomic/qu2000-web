@@ -11,6 +11,7 @@ use Session;
 use Illuminate\Pagination\Paginator;
 
 
+
 class CatalogoController extends Controller
 {
     /**
@@ -21,7 +22,8 @@ class CatalogoController extends Controller
     public function index()
     {
         $products = Product::paginate(6);     
-        $categories = Category::all();    
+        $categories = Category::all();
+     
         return view('catalogo')->with([
             'products'=>$products,
             'categories'=>$categories
@@ -54,6 +56,9 @@ class CatalogoController extends Controller
         ]);
 
     }
+
+
+    
 
 
 }

@@ -17,7 +17,7 @@
                         <nav class="items">
                             @foreach ($categories as $category)
                             <a href="{{ url('catalogo/' . $category->id)}}">{{ $category->name }}</a>
-                    @endforeach
+                            @endforeach
               
                         </nav>
                     </div>
@@ -37,7 +37,7 @@
                         <!-- <h1>Productos Destacados</h1> -->
                         <div class="grid-productos">
                    
-@foreach ($products as $product)
+                @foreach ($products as $product)
 
                         <div class="item">
                             <a href="{{ url('item/' . $product->id)}}">
@@ -52,7 +52,7 @@
 
                         </div> 
                       
- @endforeach
+                @endforeach
                       
                         </div>
                     </div>
@@ -66,34 +66,28 @@
                                    Mostrando {{$products->lastItem()}}  de {{$products->total()}}
                                    Productos
                                 </p>
-
-
                                 <div class="pages">
-                                    <a class="item selected"> 
+                                    <a class="item selected">
+                                        1
+                                        <a class="item">
+                                            <div>     {{$products-> onEachSide (1) ->links()}}  </div>
                                        
-                                         
-                                   
-                                         </a> 
-                             
-                                         {{$products->links()}}  
-                                     
+                                        </a>
+                                        <a class="item">
                                     
-                                    {{-- 
-                                    <a class="item">
-                                        3
-                                    </a>
-                                    <a class="item">
-                                        >
-                                    </a> --}}
-                                    
-                                </div>  
-                     
-            
-                                
-              
-                                                             
-                     </div>
+                                       
+                                        </a>
+                                        <a class="item">
+                                            
+                                       
+                                        </a>
+                                        </a>
+                                </div>
+                                          
+                    
                  </div>
+                </div>
+            </div>
                 </section>
                
            

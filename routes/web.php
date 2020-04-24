@@ -5,8 +5,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index');
 
 
- Route::get('catalogo', 'CatalogoController@index');
-
+Route::get('catalogo', 'CatalogoController@index'); 
 Route::get('catalogo/{id}', 'CatalogoController@shearch');
 
 //solo esta ruta basta!
@@ -22,12 +21,11 @@ Route::post('/enviadoM', 'MailControllerMayorista@sendmail')->name('rutam');
 Route::post('/enviadoC', 'MailControllerCotizador@mail')->name('rutac');
 
 
-// Route::get('/', function () {
-//     return view('inicio');
-// });
 
 
- 
+Route::get('nosotros', function () {
+    return view('nosotros');
+})->name('nosotros');
 Route::get('nosotros', function () {
     return view('nosotros');
 })->name('nosotros');
