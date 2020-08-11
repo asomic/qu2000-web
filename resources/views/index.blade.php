@@ -9,9 +9,9 @@
             <!-- Banners -->
             <section class="banners pd-lr">
                 <div class="banners-inner">
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
+                    <div class="item" style="background-image: url({{ asset('') }})"></div>
+                    <div class="item" style="background-image: url({{ asset('') }})"></div>
+                    <div class="item" style="background-image: url({{ asset('') }})"></div>
                 </div>
             </section>
 
