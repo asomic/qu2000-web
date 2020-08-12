@@ -37,10 +37,8 @@
                           @endforeach 
 
                         @else
-                        <br>
-                        <br>
-
-                        <h4>No hay Productos en el Carrito</h4>                            
+                            <br>
+                            <h6>No hay Productos en el Carrito</h6>                            
                         @endif
                     </div>
                 </section>
@@ -126,19 +124,19 @@
                          <div class="item">
                              <h4>1</h4>
                              <p>
-                                 Proin urna urna, aliquet ac scelerisque at, aliquet vel purus. Morbi malesuada et libero sed porttitor. Integer eu leo nec neque iaculis ornare quis nec nulla. Duis odio tellus, faucibus id ex non, euismod tempor nunc. Phasellus nec felis eros. Duis sed convallis odio.
+                                Selecciona los productos y cantidades a cotizar
                              </p>
                          </div>
                          <div class="item">
                              <h4>2</h4>
                              <p>
-                                 Proin urna urna, aliquet ac scelerisque at, aliquet vel purus. Morbi malesuada et libero sed porttitor. Integer eu leo nec neque iaculis ornare quis nec nulla. Duis odio tellus, faucibus id ex non, euismod tempor nunc. Phasellus nec felis eros. Duis sed convallis odio.
+                                Registra tus datos en el cotizador y enviar
                              </p>
                          </div>
                          <div class="item">
                              <h4>3</h4>
                              <p>
-                                 Proin urna urna, aliquet ac scelerisque at, aliquet vel purus. Morbi malesuada et libero sed porttitor. Integer eu leo nec neque iaculis ornare quis nec nulla. Duis odio tellus, faucibus id ex non, euismod tempor nunc. Phasellus nec felis eros. Duis sed convallis odio.
+                                En 24 hrs recibirás tu cotización a tu correo
                              </p>
                          </div>
                      </div>

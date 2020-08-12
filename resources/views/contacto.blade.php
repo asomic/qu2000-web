@@ -8,8 +8,10 @@
 
             <section class="contacto-header-wrapper pd-lr">
                 <div class="contacto-header">
-                    <h1>Pellentesque sed odio in dui vulputate elementum.</h1>
-                    <p>Praesent a massa quis ex accumsan bibendum in ut mauris. Integer tristique at lacus sed egestas. Fusce dignissim laoreet lobortis. Donec lobortis semper augue, ac luctus leo malesuada vel.</p>
+                    <h1>¿Tienes dudas? Escríbenos y te contestaremos a la brevedad.</h1>
+                    <p>
+                        En QU2000 sabemos lo importante que eres, si tienes dudas escríbenos y nos pondremos en contacto contigo.
+                    </p>
                 </div>
             </section>
 

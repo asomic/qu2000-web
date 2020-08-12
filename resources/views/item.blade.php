@@ -6,7 +6,6 @@
             <!-- Item -->
             <div class="item-wrapper pd-lr">
 
-                
                 @foreach ($product as $product)
                 <div class="item">
                     <div class="item-img">
@@ -21,11 +20,8 @@
                             <a href="{{ asset('/catalogo') }}">Limpieza</a>
                         </div>
                         <h4> {{ $product->name }}</h4>
+                        <p class="detail">COD: {{ $product->code }}</p><br>
                         <p class="text-detail">
-                           
-                       <p class="detail">COD: {{ $product->code }}</p><br>
-                        </p>
-                        <p class="unico">
                             Proin urna urna, aliquet ac scelerisque at, aliquet vel purus. Morbi malesuada et libero sed porttitor. Integer eu leo nec neque iaculis ornare quis nec nulla. Duis odio tellus, faucibus id ex non, euismod tempor nunc. Phasellus nec felis eros. Duis sed convallis odio.
                         </p>
                         <div class="add-cotz">                         
@@ -37,29 +33,25 @@
                      @endforeach
                 </div>
 
-
-
-
-
                 <div class="como-cotizar">
                     <h4>Cómo Cotizar</h4>
                     <div class="steps">
                         <div class="item">
                             <h4>1</h4>
                             <p>
-                                Proin urna urna, aliquet ac scelerisque at, aliquet vel purus. Morbi malesuada et libero sed porttitor. Integer eu leo nec neque iaculis ornare quis nec nulla. Duis odio tellus, faucibus id ex non, euismod tempor nunc. Phasellus nec felis eros. Duis sed convallis odio.
+                                Selecciona los productos y cantidades a cotizar
                             </p>
                         </div>
                         <div class="item">
                             <h4>2</h4>
                             <p>
-                                Proin urna urna, aliquet ac scelerisque at, aliquet vel purus. Morbi malesuada et libero sed porttitor. Integer eu leo nec neque iaculis ornare quis nec nulla. Duis odio tellus, faucibus id ex non, euismod tempor nunc. Phasellus nec felis eros. Duis sed convallis odio.
+                                Registra tus datos en el cotizador y enviar
                             </p>
                         </div>
                         <div class="item">
                             <h4>3</h4>
                             <p>
-                                Proin urna urna, aliquet ac scelerisque at, aliquet vel purus. Morbi malesuada et libero sed porttitor. Integer eu leo nec neque iaculis ornare quis nec nulla. Duis odio tellus, faucibus id ex non, euismod tempor nunc. Phasellus nec felis eros. Duis sed convallis odio.
+                                En 24 hrs recibirás tu cotización a tu correo
                             </p>
                         </div>
                     </div>

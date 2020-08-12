@@ -25,14 +25,6 @@
 
                 <section class="grid-productos-wrapper">
 
-                    <div class="pagination-wrapper">
-                        <div class="pagination">
-                            <div class="info">
-                                <p>Mostrando todos los artículos</p>
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="grid-productos-wrapper-inner">
                         <!-- <h1>Productos Destacados</h1> -->
                         <div class="grid-productos">
@@ -59,35 +51,18 @@
                  
                     <div class="pagination-wrapper">
                         <div class="pagination pd-b">
-                            <div class="info">
-                                                       
+                            <div class="info">  
                                 <p class="info-text">
-                                  
                                    Mostrando {{$products->lastItem()}}  de {{$products->total()}}
                                    Productos
                                 </p>
-                                <div class="pages">
-                                    <a class="item selected">
-                                        1
-                                        <a class="item">
-                                            <div>     {{$products-> onEachSide (1) ->links()}}  </div>
-                                       
-                                        </a>
-                                        <a class="item">
-                                    
-                                       
-                                        </a>
-                                        <a class="item">
-                                            
-                                       
-                                        </a>
-                                        </a>
-                                </div>
-                                          
-                    
-                 </div>
-                </div>
-            </div>
+                            </div>
+                            <div class="pages">
+                                {{-- <a href=""></a> --}}
+                                {{$products-> onEachSide (1) ->links()}}
+                            </div>
+                        </div>
+                    </div>
                 </section>
                
            

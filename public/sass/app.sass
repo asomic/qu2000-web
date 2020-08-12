@@ -117,9 +117,6 @@ p, ul, li, a
 a
     text-decoration: none
 
-
-    
-
 /* Botones: set
 a.button, button.button
     text-align: center
@@ -127,8 +124,9 @@ a.button, button.button
     text-decoration: none
     outline: none
     color: white
-    padding: 12px 18px
+    padding: 12px 14px 9px
     border-radius: 4px
+    line-height: 130%
     margin: 0
     &.add
         font-family: 'Roboto Condensed', sans-serif
@@ -172,7 +170,7 @@ a.button, button.button
         margin:
             left: auto
             right: auto
-        max-width: 1200px
+        // max-width: 1200px
 
 @media (min-width: 1400px)
     .pd-lr
@@ -377,8 +375,8 @@ header
                     padding-right: 1em
                     a
                         margin:
-                            left: 1em
-                            right: 1em
+                            left: 1.2em
+                            right: 1.2em
                         &:last-child
                             margin-right: 0
                         &:first-child
@@ -442,12 +440,14 @@ header
                 &:nth-child(2)
                     width: 32.5%
                     padding-top: 20.4%
+                    padding-top: 20.7%
                     top: 0
                     right: 0
                     bottom: 0
                 &:nth-child(3)
                     width: 32.5%
-                    padding-top: 20.5%
+                    padding-top: 20.6%
+                    padding-top: 20.7%
                     bottom: 0
                     right: 0
 
@@ -496,6 +496,7 @@ header
                     display: block
                     margin-bottom: 12px
                     margin-left: 0.15em
+                    text-transform: capitalize
                     &:last-child
                         margin-bottom: 0
                     &:before
@@ -529,8 +530,12 @@ header
                         margin-bottom: 0
                     .img
                         width: 100%
-                        height: 230px
-                        background: rgba($gray, 0.2)
+                        height: 0
+                        padding-top: 1200 / 1200 * 100%
+                        background-color: rgba($gray, 0.2)
+                        background-repeat: no-repeat
+                        background-position: center
+                        background-size: cover
                         margin-bottom: 22px
                     .data
                         h5
@@ -546,11 +551,14 @@ header
             border-radius: 2px
             .pagination
                 background: $soft-gray
-                padding: 18px 22px
+                padding: 20px 22px 18px
+                // padding-bottom: 18px
                 &.pd-b
                     margin-bottom: 1.4em
                 .info
                     text-align: center
+                    // padding-top: 22px
+                    // padding-bottom: 16px
                     p
                         font-family: 'Roboto Condensed', sans-serif
                         font-size: 15px
@@ -559,33 +567,67 @@ header
                     .info-text
                         font-weight: 700
                         color: $sky
-                  
                 .pages
-                    padding-top: 10px
+                    padding:
+                        top: 16px
+                        left: 10px
+                        // bottom: 20px
+                        right: 10px
                     text-align: center
                     display: flex
                     align-items: center
                     justify-content: center
-                    flex-wrap: no-wrap
+                    flex-wrap: nowrap
                     font-size: 17px
-                    a
-                        font-family: 'Roboto Condensed', sans-serif
-                        width: 18px
-                        height: 18px
-                        padding: 4px
-                        margin: 0
-                        line-height: 1
-                        border-radius: 30px
-                        color: black
-                        background: transparent
-                        text-align: center
-                        font-weight: 700
-                        margin-left: 0.4em
-                        &.selected
-                            color: white
-                            background: $green
-                        &:first-child
-                            margin-left: 0
+                    nav
+                        width: 100%
+                        ul.pagination
+                            padding: 0
+                            width: 100%
+                            display: flex
+                            box-sizing: border-box
+                            align-items: center
+                            align-content: center
+                            justify-content: space-between
+                            li.page-item
+                                display: flex
+                                justify-content: center
+                                box-sizing: border-box
+                                align-items: center
+                                align-content: center
+                                // margin: 0 4px
+                                padding: 12px
+                                width: 22px
+                                height: 22px
+                                border-radius: 100%
+                                background-color: $soft-gray
+                                transition: all ease 0.3s
+                                cursor: pointer
+                                &:focus,
+                                &:hover
+                                    background-color: rgba($light-blue, 0.3)
+                                &.disabled
+                                    background-color: transparent
+                                    &:focus,
+                                    &:hover
+                                        background-color: transparent
+                                &.active
+                                    color: white
+                                    background-color: $green
+                                    &:focus,
+                                    &:hover
+                                        background-color: rgba($green, 0.9)
+                                a.page-link
+                                    font-family: 'Roboto Condensed', sans-serif
+                                    padding: 4px
+                                    margin: 0
+                                    line-height: 1
+                                    border-radius: 30px
+                                    color: black
+                                    background: transparent
+                                    text-align: center
+                                    font-weight: 700
+                                    font-size: 15px
 
 @media (min-width: 768px)
     .catalogo-wrapper
@@ -609,6 +651,7 @@ header
                     display: flex
                     flex-wrap: wrap
                     width: 100%
+                    // padding: 0
                     box-sizing: border-box
                     .item
                         width: 32%
@@ -616,26 +659,27 @@ header
                         &:nth-child(3n)
                             margin-right: 0
                         .img
-                            height: 170px
+                            // height: 170px
                         .data
                             h5
                             p
                         .button
             .pagination-wrapper
                 .pagination
+                    padding: 22px 22px 20px
                     &.pd-b
                     .info
-                        display: flex
-                        justify-content: space-between
-                        align-items: center
                         p
                         .info-text
                     .pages
-                        padding-top: 0
-                        a
-                            margin-left: 0.6em
-                            &.selected
-                            &:first-child
+                        max-width: 60%
+                        margin:
+                            left: auto
+                            right: auto
+                        nav
+                            ul.pagination
+                                li.page-item
+                                    a.page-link
 
 @media (min-width: 900px)
     .catalogo-wrapper
@@ -644,15 +688,17 @@ header
         align-items: stretch
         height: auto
         flex-wrap: nowrap
+        box-sizing: border-box
         padding-bottom: 24px
         .categorias-wrapper
             // height: max-content
             // height: 100%
             height: auto
             // align-self: stretch
-            width: 70%
+            width: 35%
             box-sizing: border-box
             padding-right: 24px
+            box-sizing: border-box
             // height: 100%
             .categorias
                 height: 100%
@@ -668,7 +714,8 @@ header
                         &:last-child
                         &:before
         .grid-productos-wrapper
-            width: auto
+            width: 100%
+            box-sizing: border-box
             .pagination-wrapper
                 margin-top: 0
             .grid-productos-wrapper-inner
@@ -678,26 +725,16 @@ header
                 h1
                     margin-bottom: 0.3em
                 .grid-productos
+                    padding: 0
                     .item
                         &:nth-child(3n)
                         .img
-                            height: 180px
+                            // height: 180px
                         .data
                             h5
                             p
                         .button
             .pagination-wrapper
-                .pagination
-                    &.pd-b
-                        margin-bottom: 0
-                    .info
-                        p
-                        .info-text
-                    .pages
-                        a
-                            &.selected
-                            &:first-child
-
 
 @media (min-width: 1200px)
     .catalogo-wrapper
@@ -744,23 +781,35 @@ header
                     .item
                         &:nth-child(3n)
                         .img
-                            height: 229px
+                            // height: 229px
                         .data
                             h5
                             p
                         .button
             .pagination-wrapper
                 .pagination
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
                     &.pd-b
-                        // margin-bottom: 0
                     .info
+                        width: 40%
+                        text-align: left
                         p
                         .info-text
                     .pages
-                        a
-                            &.selected
-                            &:first-child
-
+                        // text-align: right
+                        margin-left: 0
+                        margin-right: 0
+                        padding:
+                            top: 0
+                        width: 50%
+                        nav
+                            ul.pagination
+                                li.page-item
+                                    text-align: center
+                                    a.page-link
+                                        text-align: center
 
 @media (min-width: 1400px)
     .catalogo-wrapper
@@ -889,18 +938,22 @@ header
 .item-wrapper
     .item
         margin-bottom: 3em
+        margin-bottom: 2.4em
         .item-img
-            margin-bottom: 2em
+            // margin-bottom: 2em
             width: 100%
-            height: 280px
-            background: rgba($gray, 0.2)
+            height: 0
+            padding-top: 1 / 1.065 * 100%
+            background-color: rgba($gray, 0.2)
             border-radius: 4px
             border: 12px solid $soft-gray
             box-sizing: border-box
         .data
             .breadcrumb
-                margin-left: 4px
-                margin-bottom: 2em
+                margin:
+                    top: 1.6em
+                    left: 4px
+                    bottom: 1.5em
                 a
                     color: $dark-gray
                     font-size: 14px
@@ -920,14 +973,18 @@ header
                     margin-right: 0.5em
                     display: inline-block
             h4
-                margin-bottom: 6px
                 line-height: 120%
+                margin-bottom: 6px
+                margin-bottom: 8px
+            p.detail
+                font-size: 13px
+                margin-bottom: 4px
+                color: rgba($middle-gray, 0.8)
             p.text-detail
                 font-size: 14px
+                line-height: 140%
                 margin-bottom: 1.8em
-            div
-                display: flex
-                padding-top: 38px
+                margin-bottom: 1.4em
             p.precio-red
                 line-height: 145%
                 margin-bottom: 2em
@@ -957,12 +1014,13 @@ header
                         appearance: none
                         align-self: stretch
                 a
-                    width: 25%
+                    // width: 25%
     .como-cotizar
         background: $soft-gray
         border-radius: 4px
-        padding: 34px 22px 12px
+        padding: 32px 22px
         margin-bottom: 1.4em
+        box-sizing: border-box
         h4
             color: $dark-blue
             margin-bottom: 1em
@@ -971,6 +1029,8 @@ header
                 display: flex
                 justify-content: space-between
                 margin-bottom: 2.4em
+                &:last-child
+                    margin-bottom: 0
                 h4
                     margin: 0
                     background: $green
@@ -978,21 +1038,19 @@ header
                     color: white
                     border-radius: 30px
                     font-size: 15px
-                    width: 30px
                     height: 30px
                     display: flex
                     justify-content: center
                     align-items: center
-                    width: 10%
+                    width: 100%
+                    max-width: 30px
                     margin-bottom: 12px
-                p.precio-red
+                    margin-right: 12px
+                p
                     line-height: 135%
                     font-size: 15px
-                    width: 84%
-                    margin-right: 63px
-                    span
-                        font-size: 25px
-                        font-weight: bold
+                    width: 100%
+                    // margin-right: 63px
 
 
 
@@ -1004,12 +1062,13 @@ header
             justify-content: space-between
             .item-img
                 width: 45%
+                padding-top: 1 / 2.4 * 100%
                 margin-bottom: 0
             .data
                 width: 50%
                 padding-left: 2em
                 padding-right: 0.4em
-                padding-top: 1em
+                padding-top: 0
                 .breadcrumb
                     a
                     span
@@ -1022,9 +1081,10 @@ header
                     label
                         .quantity
                     a
+                        font-size: 14px
         .como-cotizar
             // padding: 42px 32px
-            padding: 42px 32px 22px
+            padding: 36px 32px
             margin-bottom: 1.8em
             h4
             .steps
@@ -1091,6 +1151,7 @@ header
                     &:before
                 h4
                 p.text-detail
+                    line-height: 150%
                 p.precio-red
                     margin-right: 63px
                     span
@@ -1104,11 +1165,13 @@ header
                     a
                         width: auto
         .como-cotizar
+            padding: 34px 32px 12px
             h4
+                margin-bottom: 0.8em
             .steps
                 justify-content: space-between
                 .item
-                    width: 26%
+                    width: 30%
                     h4
                         margin-right: 12px
                         width: 85%
@@ -1196,10 +1259,14 @@ header
     .nosotros-header
         .img
             width: 100%
-            height: 240px
+            height: 0
+            padding-top: 1200 / 1900 * 100%
             background-color: $green
             border-radius: 4px
             margin-bottom: 2em
+            background-position: center
+            background-size: contain
+            background-repeat: no-repeat
         .data
             text-align: center
             margin-bottom: 2.8em
@@ -1217,8 +1284,9 @@ header
             align-content: center
             padding-bottom: 2.6em
             .img
-                width: 47%
-                height: 300px
+                width: 48%
+                padding-top: 370 / 1200 * 100%
+                max-height: 300px
                 margin-bottom: 0
             .data
                 width: 46%
@@ -1277,18 +1345,23 @@ header
             display: flex
             justify-content: space-between
             flex-wrap: wrap
+            align-items: center
             .img-wrapper
                 width: 44%
+                height: 100%
                 padding: 1.5em 0
                 .img
                     box-sizing: border-box
                     width: 100%
-                    height: 100%
+                    // height: 235px
+                    height: 0
+                    padding-top: 1200 / 1900 * 100%
                     background: $green
                     border-radius: 8px
             .line
                 width: 12%
                 position: relative
+                align-self: stretch
                 &::before
                     content: ''
                     left: 0
@@ -1575,6 +1648,7 @@ header
                 h1
                     margin-bottom: 26px
                 .items
+                    padding-left: 0.8em
                     li
                         margin-bottom: 27px
                         a
@@ -1666,8 +1740,8 @@ header
 
 /* Mayoristas: Testimonios
 .mayoristas-testimonios-wrapper
-    padding-left: 3%
-    padding-right: 3%
+    padding-left: 5vw
+    padding-right: 5vw
     background: $soft-gray
     .mayoristas-testimonios
         padding: 2.7em 0 3.1em
@@ -1690,13 +1764,19 @@ header
             .img
                 order: 1
                 width: 100%
-                height: 260px
-                background: rgba($gray, 0.3)
+                height: 0
+                padding-top: 1200 / 1900 * 100%
+                background-color: rgba($gray, 0.3)
                 border-radius: 8px
                 margin-bottom: 2em
+                background-position: center
+                background-size: cover
+                background-repeat: no-repeat
 
 @media (min-width: 768px)
     .mayoristas-testimonios-wrapper
+        padding-left: 5.4vw
+        padding-right: 5.4vw
         .mayoristas-testimonios
             padding: 3.6em 0 4em
             .item
@@ -1717,6 +1797,7 @@ header
                 .img
                     width: 46%
                     margin-bottom: 0
+                    padding-top: 550 / 1900 * 100%
 
 @media (min-width: 900px)
     .mayoristas-testimonios-wrapper
@@ -1733,7 +1814,7 @@ header
                     .data
                     .img
                 .img
-                    height: 290px
+                    // height: 290px
 
 @media (min-width: 1200px)
     .mayoristas-testimonios-wrapper
@@ -1751,7 +1832,7 @@ header
                     .data
                     .img
                 .img
-                    height: 290px
+                    // height: 290px
 
 @media (min-width: 1400px)
     .mayoristas-testimonios-wrapper
@@ -1769,7 +1850,7 @@ header
                     .data
                     .img
                 .img
-                    height: 290px
+                    // height: 290px
 
 @media (min-width: 1600px)
     .mayoristas-testimonios-wrapper
@@ -1787,7 +1868,8 @@ header
                     .data
                     .img
                 .img
-                    height: 290px
+                    // height: 290px
+
 /* Cotizador: Productos y Formulario
 .cot-container
     .cot-wrapper
@@ -1806,10 +1888,16 @@ header
                     align-content: center
                     margin-bottom: 10px
                     height: 100%
-                    .img
-                        width: 25%
-                        height: 60px
-                        background: rgba($gray, 0.3)
+                    a
+                        width: 16vw
+                        height: 16vw
+                        .img
+                            width: 100%
+                            height: 100%
+                            background-color: rgba($gray, 0.3)
+                            background-size: cover
+                            background-position: center
+                            background-repeat: no-repeat
                     .data
                         width: 60%
                         padding: 0 14px
@@ -2082,7 +2170,7 @@ header
         justify-content: space-between
         flex-wrap: wrap
         .cot-wrapper
-            width: 62%
+            width: 66%
             .cot-productos-wrapper
                 .cot-productos
                     h3
@@ -2098,11 +2186,13 @@ header
                         &:last-child
             .cot-form-wrapper
         .item-wrapper
-            width: 34%
+            width: 30%
             .como-cotizar
                 .steps
                     .item
                         width: 100%
+                        &:last-child
+                            margin-bottom: 24px
                     h4
                         width: 65%
 
@@ -2714,14 +2804,19 @@ header
         .img
             order: 1
             width: 100%
-            height: 250px
-            background: rgba($blue, 0.2)
+            height: 0
+            padding-top: 949 / 1400 * 100%
+            background-color: rgba($blue, 0.2)
+            background-size: cover
+            background-repeat: no-repeat
+            background-position: center
             margin-bottom: 30px
 
 @media (min-width: 768px)
     .cta-socios
         .socios-inner
             width: 100%
+            box-sizing: border-box
             padding:
                 top: 6.1em
                 bottom: 6.4em
@@ -2741,6 +2836,7 @@ header
                 width: 43%
                 order: 2
                 margin-bottom: 0
+                padding-top: 429 / 1400 * 100%
                 border-radius: 10px
 
 @media (min-width: 900px)
@@ -2757,7 +2853,7 @@ header
                 a
             .img
                 width: 45%
-                height: 310px
+                // height: 310px
 
 @media (min-width: 1200px)
    .cta-socios
@@ -2802,6 +2898,7 @@ header
             .img
                 // width: 45%
                 // height: 310px
+
 @media (min-width: 1600px)
      .cta-socios
         .socios-inner
@@ -2993,7 +3090,13 @@ header
             font-size: 15px
             margin-bottom: 24px
         .buttons
+            display: flex
+            justify-content: center
+            align-items: center
             a
+                // line-height: 130%
+                // padding-bottom: 8px
+                margin: 0 4px
 
 @media (min-width: 768px)
     .cta-contacto
@@ -3214,7 +3317,7 @@ footer.site-footer
                 // display: flex
                 // justify-content: space-between
                 // text-align: left
-                padding-right: 156px
+                padding-right: 42px
                 .logo
                     img
                 .rrss, .numbers, .fabrica

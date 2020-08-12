@@ -29,7 +29,7 @@
                     </ul>
                 </nav>
                 <div class="action-menu">
-                    <a href="{{ asset('/cotizador') }}" class="cart-menu">
+                    <a href="{{ asset('/cotizador') }}" class="cart-menu has-items">
                         <img src="{{ asset('/images/cart-process.png') }}" alt="Ir al cotizador">
                     </a>
                     <button class="hamburger hamburger--collapse" type="button">

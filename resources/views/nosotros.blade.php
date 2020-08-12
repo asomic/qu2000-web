@@ -6,10 +6,12 @@
     <!-- Nootros Header -->
     <section class="nosotros-header-wrapper pd-lr">
         <div class="nosotros-header">
-            <div class="img"></div>
+            <div class="img" style="background-image: url()"></div>
             <div class="data">
-                <h1>Pellentesque sed odio in dui vulputate elementum.</h1>
-                <p>Praesent a massa quis ex accumsan bibendum in ut mauris. Integer tristique at lacus sed egestas. Fusce dignissim laoreet lobortis. Donec lobortis semper augue, ac luctus leo malesuada vel.</p>
+                <h1>Tradición Familiar</h1>
+                <p>
+                    Trabajamos juntos para brindarte soluciones concretas para tu negocio u hogar.
+                </p>
             </div>
         </div>
     </section>

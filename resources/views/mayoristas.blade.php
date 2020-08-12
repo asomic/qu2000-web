@@ -9,14 +9,12 @@
             <section class="mayoristas-header-wrapper pd-lr">
                 <div class="mayoristas-header">
                     <div class="data">
-                        <h1>Pellentesque sed odio in dui vulputate elementum.</h1>
+                        <h1>Distribuye nuestros productos #SeamosSocios</h1>
                         <nav class="items">
-                            <li>Praesent a massa quis ex accumsan bibendum.</li>
-                            <li>Mauris sit amet bibendum enim, nec maximus nulla.</li>
-                            <li>Sed sollicitudin lacus volutpat nisi condimentum ullamcorper</li>
-                            <li>Nullam eget dui pretium, aliquam est a, consectetur</li>
-                            <li>Mauris sit amet bibendum enim, nec maximus nulla.</li>
-                            <li>Praesent a massa quis ex accumsan bibendum.</li>
+                            <li>Precios al por mayor</li>
+                            <li>Envío gratuito</li>
+                            <li>Material de apoyo para redes sociales</li>
+                            <li>Ofertas Exclusivas</li>
                         </nav>
                     </div>
                     <div class="form">
@@ -76,7 +74,7 @@
                                 Mauris dapibus tincidunt tortor, sit amet convallis ante fringilla nec. Aenean fermentum arcu id nisi luctus porttitor ut vel nisl. Ut vulputate orci eget sodales euismod. Sed urna nibh, rutrum quis ultricies sed, consequat nec mi. Integer sed tellus tortor. Ut at neque ligula. Suspendisse aliquam sit amet felis quis lacinia.
                             </p>
                         </div>
-                        <div class="img"></div>
+                        <div class="img" style="background-image: url()"></div>
                     </div>
                     <!-- Item -->
                     <div class="item">
@@ -89,7 +87,7 @@
                                 Mauris dapibus tincidunt tortor, sit amet convallis ante fringilla nec. Aenean fermentum arcu id nisi luctus porttitor ut vel nisl. Ut vulputate orci eget sodales euismod. Sed urna nibh, rutrum quis ultricies sed, consequat nec mi. Integer sed tellus tortor. Ut at neque ligula. Suspendisse aliquam sit amet felis quis lacinia.
                             </p>
                         </div>
-                        <div class="img"></div>
+                        <div class="img" style="background-image: url()"></div>
                     </div>
 
                 </div>

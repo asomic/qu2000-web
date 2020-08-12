@@ -9,9 +9,9 @@
             <!-- Banners -->
             <section class="banners pd-lr">
                 <div class="banners-inner">
-                    <div class="item" style="background-image: url({{ asset('') }})"></div>
-                    <div class="item" style="background-image: url({{ asset('') }})"></div>
-                    <div class="item" style="background-image: url({{ asset('') }})"></div>
+                    <div class="item" style="background-image: url()"></div>
+                    <div class="item" style="background-image: url()"></div>
+                    <div class="item" style="background-image: url()"></div>
                 </div>
             </section>
 
@@ -22,10 +22,11 @@
                         <h1>Productos Destacados</h1>
                         <div class="grid-productos">
 
-@foreach ($products as $product)
-    <!-- Item -->
+                            @foreach ($products as $product)
+                            <!-- Item -->
                             <div class="item">
                                 <a href="{{ url('item/' . $product->id)}}">
+                                    {{-- <div class="img" style="background-image: url('{{asset('/images/11.jpg')}}')"></div></a> --}}
                                     <div class="img" style="background-image: url('{{ $product->image }}')"></div></a>
                                 <div class="data">
                                     <a  href="{{ url('item/' . $product->id)}}">
@@ -38,7 +39,7 @@
                                 {{-- <a class="button add"  name="sumit" type="sumit" href="{{ url('obtenerProductoindex/' . $product->id)}}">Agregar al Cotizador</a> --}}
                                 <a class="button add"  href="{{ route('items.add',['id'=>$product->id])}}">Agregar al Cotizador</a>
                             </div>
-@endforeach
+                            @endforeach
 
                         </div>
                     </div>
@@ -50,9 +51,9 @@
             <section class="cta-full-wide empresa-familiar ">
                 <div class="data">
                     <img src="{{ asset('/images/logo.png') }}" alt="QU2000">
-                    <h1 class="inv">Una Empresa Familiar del Maule para Chile</h1>
-                    <p class="inv">Praesent a massa quis ex accumsan bibendum in ut mauris. Integer tristique at lacus sed egestas.</p>
-                    <a class="button goto" href="/nosotros.html">Más Información</a>
+                    <h1 class="inv">Una empresa familiar, que conoce tus necesidades</h1>
+                    <p class="inv">La limpieza de tu hogar, ahora al alcance de tu bolsillo.</p>
+                    <a class="button goto" href="/nosotros">Más Información</a>
                 </div>
             </section>
 
@@ -60,13 +61,13 @@
             <section class="cta-socios">
                 <div class="socios-inner pd-lr">
                     <div class="data">
-                        <h1 class="inv">Seamos Socios</h1>
+                        <h1 class="inv">Seamos Socios, conversemos</h1>
                         <p>
-                            Praesent a massa quis ex accumsan bibendum in ut mauris. Integer tristique at lacus sed egestas. Fusce dignissim laoreet lobortis. Donec lobortis semper augue, ac luctus leo malesuada vel.
+                            Distribuye nuestros productos, contamos con convenios especiales para empresas y pequeños negocios.
                         </p>
-                        <a class="button goto" href="/mayoristas.html">Más Información</a>
+                        <a class="button goto" href="/mayoristas">Más Información</a>
                     </div>
-                    <div class="img"></div>
+                    <div class="img" style="background-image: url({{ asset('/images/socios.jpg') }})"></div>
                 </div>
             </section>
 
@@ -74,10 +75,9 @@
             <section class="sellos">
                 <div class="sellos-inner pd-lr">
                     <div class="info">
-                        <h1>Si va a pagar poco
-                            lleve productos de calidad</h1>
+                        <h1>Calidad al alcance de todos los bolsillos</h1>
                         <p>
-                            Praesent a massa quis ex accumsan bibendum in ut mauris. Integer tristique at lacus sed egestas. Fusce dignissim laoreet lobortis. Donec lobortis semper augue, ac luctus leo malesuada vel.
+                            En Qu2000 nos preocupamos de que no te falte nada, brindándote productos de calidad a un precio justo.
                         </p>
                     </div>
                     <div class="los-sellos">
@@ -104,12 +104,14 @@
                 </div>
                 <div class="contacto-inner">
                     <h1 class="inv">Contáctenos</h1>
-                    <p class="inv">Praesent a massa quis ex accumsan bibendum in ut mauris. Integer tristique at lacus sed egestas. Fusce dignissim laoreet lobortis. Donec lobortis semper augue, ac luctus leo malesuada vel.</p>
+                    <p class="inv">
+                        Comunícate con nosotros de manera simple, aquí te dejamos dos métodos, vía WhatsApp o a través de nuestro formulario. #Conversemos.
+                    </p>
                     <div class="buttons">
                         <a class="button goto whatsapp" href="/">
                             Via Whatsapp
                         </a>
-                        <a class="button goto" href="/">
+                        <a class="button goto" href="/contacto">
                             Via Formulario
                         </a>
                     </div>
