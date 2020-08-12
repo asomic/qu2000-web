@@ -960,16 +960,10 @@ header .header-inner .action-menu img {
   .catalogo-wrapper .categorias-wrapper .categorias {
     padding: 35px 0px 0px 25px;
   }
-  .catalogo-wrapper .grid-productos-wrapper .grid-productos-wrapper-inner .grid-productos .item .img {
-    height: 239px;
-  }
 }
 @media (min-width: 1600px) {
   .catalogo-wrapper .categorias-wrapper .categorias .categorias-header .toggle-cat {
     display: none;
-  }
-  .catalogo-wrapper .grid-productos-wrapper .grid-productos-wrapper-inner .grid-productos .item .img {
-    height: 249px;
   }
 }
 .item-wrapper .item {
