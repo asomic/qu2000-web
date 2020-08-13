@@ -12,6 +12,13 @@
 <body>
     <main class="site-wrapper">
 
+        <div class="alerts-wrapper">
+            <div class="alert add">
+                <img src="{{asset('/images/cart-icon-mini.png')}}">
+                <p>Producto agregado</p>
+            </div>
+        </div>
+
         <!-- Header -->
         <header>
             <div class="header-inner pd-lr">

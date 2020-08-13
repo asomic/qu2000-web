@@ -21,7 +21,7 @@ class CatalogoController extends Controller
      *///comentado
     public function index()
     {
-        $products = Product::paginate(6);     
+        $products = Product::paginate(9);     
         $categories = Category::all();
      
         return view('catalogo')->with([
@@ -45,7 +45,7 @@ class CatalogoController extends Controller
     public function shearch($id)
     {
 
-        $products = Product::where('category_id', (int)$id)->paginate(6);
+        $products = Product::where('category_id', (int)$id)->paginate(12);
         $categories = Category::all();
      
         return view('catalogo')->with([

@@ -32,7 +32,6 @@
                                     <a  href="{{ url('item/' . $product->id)}}">
                                         <h5> {{ $product->name }}</h5>
                                     </a>
-
                                     <p class="detail">COD: {{ $product->code }}</p>
                                 </div>
                                 {{-- <a> nunca a  tenido submit!! compy & paste?  --}}
@@ -61,7 +60,7 @@
             <section class="cta-socios">
                 <div class="socios-inner pd-lr">
                     <div class="data">
-                        <h1 class="inv">Seamos Socios, conversemos</h1>
+                        <h1 class="inv">Seamos Socios,<br>conversemos</h1>
                         <p>
                             Distribuye nuestros productos, contamos con convenios especiales para empresas y pequeños negocios.
                         </p>
@@ -80,7 +79,7 @@
                             En Qu2000 nos preocupamos de que no te falte nada, brindándote productos de calidad a un precio justo.
                         </p>
                     </div>
-                    <div class="los-sellos">
+                    {{-- <div class="los-sellos">
                         <div class="item">
                             <img src="{{ asset('/') }}" alt="Sello">
                             <p class="sello">Sello de calidad 1</p>
@@ -93,7 +92,7 @@
                             <img src="{{ asset('/') }}" alt="Sello">
                             <p class="sello">Sello de calidad 1</p>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </section>
 

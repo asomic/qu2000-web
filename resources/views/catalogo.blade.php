@@ -18,7 +18,6 @@
                             @foreach ($categories as $category)
                             <a href="{{ url('catalogo/' . $category->id)}}">{{ $category->name }}</a>
                             @endforeach
-              
                         </nav>
                     </div>
                 </div>
@@ -29,22 +28,22 @@
                         <!-- <h1>Productos Destacados</h1> -->
                         <div class="grid-productos">
                    
-                @foreach ($products as $product)
+                            @foreach ($products as $product)
 
-                        <div class="item">
-                            <a href="{{ url('item/' . $product->id)}}">
-                                <div class="img" style="background-image: url('{{ $product->image }}')"></div></a>
-                            <div class="data">
-                                <a  href="{{ url('item/' . $product->id)}}">
-                                    <h5> {{ $product->name }}</h5>
-                                </a>
-                                <p class="detail">COD: {{ $product->code }}</p>
-                            </div>
-                            <a class="button add"  href="{{ route('items.add',['id'=>$product->id])}}">Agregar al Cotizador</a>
+                            <div class="item">
+                                <a href="{{ url('item/' . $product->id)}}">
+                                    <div class="img" style="background-image: url('{{ $product->image }}')"></div></a>
+                                <div class="data">
+                                    <a  href="{{ url('item/' . $product->id)}}">
+                                        <h5> {{ $product->name }}</h5>
+                                    </a>
+                                    <p class="detail">COD: {{ $product->code }}</p>
+                                </div>
+                                <a class="button add"  href="{{ route('items.add',['id'=>$product->id])}}">Agregar al Cotizador</a>
 
-                        </div> 
-                      
-                @endforeach
+                            </div> 
+                        
+                            @endforeach
                       
                         </div>
                     </div>
@@ -53,7 +52,7 @@
                         <div class="pagination pd-b">
                             <div class="info">  
                                 <p class="info-text">
-                                   Mostrando {{$products->lastItem()}}  de {{$products->total()}}
+                                   {{$products->lastItem()}}  de {{$products->total()}}
                                    Productos
                                 </p>
                             </div>

@@ -8,30 +8,30 @@
                 <section class="cot-productos-wrapper">
                     <div class="cot-productos">
                         <h3>Productos</h3>
-
                 
                         @if (session()->has('itemList') && Session::get('itemList')!=[])
                             
                           @foreach (Session::get('itemList') as $item)
                        
                            {{-- ahora trabajamos con un array no un objeto --}}
-                          <div class="item">
-                            <a href="">
-                                <div class="img" style="background-image: url('{{ $item['product']['image'] }}')"></div></a>
+                        <div class="item">
+                            <a href="{{ url('item/' . $item['product']['id'] )}}">
+                                <div class="img" style="background-image: url('{{ $item['product']['image'] }}')"></div>
+                            </a>
                             <div class="data">
-                                <a  href="{{ url('item/' . $item['product']['id'] )}}">
+                                <a href="{{ url('item/' . $item['product']['id'] )}}">
                                     <h5> {{ $item['product']['name'] }}</h5>
                                 </a>
                                 <p class="detail">COD: {{ $item['product']['code'] }}</p>
                             </div>
-                           <div class="modify">
-                            <form action="{{route('items.update',['id'=>$item['product']['id']])}}">
-                                @csrf
-                                <input id="quantity" type="number" name="quantity" value="{{$item['quantity']}}" min="1" class="quantity">
-                                <button type="submit" >update</button>
-                            </form>
-                                <a href="{{ route('items.remove',['id'=>$item['product']['id']])}}"><img src="{{asset('/images/icon-trash.png')}}"></a>
-                           </div>
+                            <div class="modify">
+                                <form action="{{route('items.update',['id'=>$item['product']['id']])}}">
+                                    @csrf
+                                    <input id="quantity" type="number" name="quantity" value="{{$item['quantity']}}" min="1" class="quantity">
+                                    <button type="submit"><img src="{{asset('/images/icon-update.png')}}"></button>
+                                    <a href="{{ route('items.remove',['id'=>$item['product']['id']])}}"><img src="{{asset('/images/icon-trash.png')}}"></a>
+                                </form>
+                            </div>
                         </div>
                                    
                           @endforeach 

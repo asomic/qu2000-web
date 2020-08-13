@@ -22,6 +22,9 @@ $soft-gray: #F8F8F8
   font-weight: 700
   font-style: normal
 
+html
+    background-color: $sky
+
 /* Typo: Set
 // font-family: 'Bebas Neue'
 // font-family: 'Roboto', sans-serif
@@ -30,6 +33,7 @@ body
     font-size: 15px
     box-sizing: border-box
     position: relative
+    background-color: white
     z-index: 2
     // Arriba
     &:after
@@ -124,24 +128,38 @@ a.button, button.button
     text-decoration: none
     outline: none
     color: white
-    padding: 12px 14px 9px
+    padding: 12px 16px 9px
     border-radius: 4px
     line-height: 130%
     margin: 0
+    transition: all ease 0.3s
     &.add
         font-family: 'Roboto Condensed', sans-serif
-        background: $sky
+        background-color: $sky
         font-weight: 700
+        &:focus,
+        &:hover
+            background-color: $blue
     &.goto
-        background: $blue
+        background-color: $blue
         font-family: 'Bebas Neue'
         letter-spacing: 0.06em
+        &:focus,
+        &:hover
+            background-color: $dark-blue
         &.whatsapp
-            background: white
+            background-color: white
             color: #189D0E
+            &:focus,
+            &:hover
+                color: green
+                background-color: white
     &.ready
         background: $sky
         font-family: 'Bebas Neue'
+        &:focus,
+        &:hover
+            background-color: $dark-blue
 
 /* Paddings: set
 .pd-lr
@@ -218,6 +236,31 @@ a.button, button.button
     animation-duration: 0.5s
     animation-fill-mode: forwards
 
+.alerts-wrapper
+    // width: 200px
+    position: fixed
+    z-index: 9999
+    bottom: 3vh
+    right: 2vw
+    opacity: 0
+    transition: all ease 0.3s
+    &.show
+        opacity: 1
+    .alert
+        padding: 13px 18px
+        border-radius: 26px
+        display: flex
+        &.add
+            background-color: $green
+            img
+                width: auto
+                height: 14px
+                margin-right: 8px
+            p
+                text-align: center
+                color: $black
+                font-size: 14px
+
 /* Header
 header
     z-index: 999
@@ -266,8 +309,12 @@ header
                     font-size: 1.45em
                     display: block
                     margin-bottom: 14px
+                    transition: all ease 0.3s
                     &:last-child
                         margin-bottom: 0
+                    &:hover,
+                    &:focus
+                        color: rgba($black, 0.6)
         .action-menu
             order: 2
             width: 50%
@@ -278,16 +325,37 @@ header
             a.cart-menu
                 margin-right: 16px
                 position: relative
+                transition: all ease 0.3s
+                // padding: 6px
                 &.has-items
                     &::before
                         content: ''
                         width: 10px
                         height: 10px
                         border-radius: 10px
+                        background-color: $red
                         position: absolute
-                        background: red
-                        top: -2px
-                        right: -4px
+                        top: 4px
+                        right: -2px
+                &::after
+                    content: ''
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    margin-left: auto
+                    margin-right: auto
+                    background-color: transparent
+                    top: 0
+                    left: 0
+                    right: 0
+                    bottom: 0 
+                    border-radius: 100%
+                    z-index: -1
+                    transition: all ease 0.3s
+                &:hover,
+                &:focus
+                    &::after
+                        background-color: rgba($light-blue, 0.2)
             .hamburger
                 padding: 0
                 transition-duration: 2s
@@ -497,6 +565,8 @@ header
                     margin-bottom: 12px
                     margin-left: 0.15em
                     text-transform: capitalize
+                    opacity: 1
+                    transition: all ease 0.3s
                     &:last-child
                         margin-bottom: 0
                     &:before
@@ -509,6 +579,9 @@ header
                         background-size: cover
                         margin-right: 0.6em
                         display: inline-block
+                    &:focus,
+                    &:hover
+                        opacity: 0.7
     .pagination-wrapper
     .grid-productos-wrapper
         .grid-productos-wrapper-inner
@@ -647,6 +720,7 @@ header
             .grid-productos-wrapper-inner
                 &.index-pd
                 h1
+                    margin-bottom: 10px
                 .grid-productos
                     display: flex
                     flex-wrap: wrap
@@ -723,7 +797,7 @@ header
                     padding-top: 4.8em
                     padding-bottom: 2.6em
                 h1
-                    margin-bottom: 0.3em
+                    margin-bottom: 0.5em
                 .grid-productos
                     padding: 0
                     .item
@@ -776,7 +850,7 @@ header
                     // padding-top: 4.8em
                     // padding-bottom: 2.6em
                 h1
-                    // margin-bottom: 0.3em
+                    margin-bottom: 0.7em
                 .grid-productos
                     .item
                         &:nth-child(3n)
@@ -1884,22 +1958,25 @@ header
                     border-radius: 4px
                     box-sizing: border-box
                     display: flex
+                    justify-content: space-between
                     align-items: center
                     align-content: center
                     margin-bottom: 10px
+                    widrh: 100%
                     height: 100%
                     a
-                        width: 16vw
-                        height: 16vw
+                        width: 30%
+                        height: 12vw
+                        // width: 16vw
                         .img
-                            width: 100%
-                            height: 100%
+                            width: 12vw
+                            height: 12vw
                             background-color: rgba($gray, 0.3)
                             background-size: cover
                             background-position: center
                             background-repeat: no-repeat
                     .data
-                        width: 60%
+                        width: 100%
                         padding: 0 14px
                         h5
                             margin: 0
@@ -1909,32 +1986,55 @@ header
                             margin: 0
                             font-size: 13px
                     .modify
-                        width: 25%
+                        min-width: 30%
                         height: 100%
                         box-sizing: border-box
                         display: flex
-                        justify-content: stretch
+                        justify-content: flex-end
                         text-align: center
                         align-items: center
-                        input
-                            width: 50%
-                            border: solid 1px $light-blue
-                            border-radius: 4px
-                            text-align: center
-                            height: 40px
-                            box-sizing: border-box
-                            margin-right: 4px
-                        a
-                            width: 50%
-                            border: solid 1px $light-blue
-                            border-radius: 2px
-                            height: 40px
-                            box-sizing: border-box
+                        form
                             display: flex
-                            justify-content: center
+                            justify-content: flex-end
                             align-items: center
-                            img
-                                width: 16px
+                            align-content: center
+                            input, button
+                                height: 32px
+                                box-sizing: border-box
+                                width: 32px
+                                margin-right: 4px
+                                border-radius: 2px
+                                background-color: $soft-gray
+                                transition: all ease 0.3s
+                            input
+                                width: 36px
+                                border: solid 1px $light-blue
+                            button
+                                background-color: $green
+                                outline: none
+                                box-shadow: none
+                                border: none
+                                img
+                                    width: 16px
+                                &:focus,
+                                &:hover
+                                    background-color: rgba($green, 0.8)
+                            a
+                                height: 32px
+                                width: 32px
+                                // border: solid 1px $light-blue
+                                background-color: red
+                                border-radius: 2px
+                                box-sizing: border-box
+                                display: flex
+                                justify-content: center
+                                align-items: center
+                                transition: all ease 0.3s
+                                img
+                                    width: 16px
+                                &:focus,
+                                &:hover
+                                    background-color: $red
                     &:last-child
                         margin-bottom: 0
         .cot-form-wrapper
@@ -2044,9 +2144,13 @@ header
                 .cot-productos
                     h3
                     .item
-                        .img
-                            width: 66px
-                            height: 66px
+                        padding: 14px 14px
+                        a
+                            width: 14%
+                            height: 9vw
+                            .img
+                                width: 9vw
+                                height: 9vw
                         .data
                             width: 70%
                             padding: 0 16px
@@ -2109,9 +2213,12 @@ header
                 .cot-productos
                     h3
                     .item
-                        .img
-                            width: 66px
+                        a
+                            width: 80px
                             height: 66px
+                            .img
+                                width: 66px
+                                height: 66px
                         .data
                             width: 70%
                             padding: 0 16px
@@ -2119,9 +2226,9 @@ header
                                 font-size: 18px
                             p
                         .modify
-                            width: 17%
+                            // width: 17%
                             input
-                                margin-right: 8px
+                                // margin-right: 8px
                             a
                                 img
                         &:last-child
@@ -2175,6 +2282,7 @@ header
                 .cot-productos
                     h3
                     .item
+                        padding: 14px 16px
                         .img
                         .data
                             h5
@@ -2743,14 +2851,14 @@ header
         .data
             // padding-top: 8.6em
             // padding-bottom: 8.6em
-            width: 30%
+            width: 40%
             img
             h1
                 // padding-left: 150px
                 // padding-right: 150px
             p
             a
-                width: 40%
+                // width: 40%
 
 @media (min-width: 1400px)
     .cta-full-wide
@@ -2759,14 +2867,11 @@ header
         .data
             // padding-top: 8.6em
             // padding-bottom: 8.6em
-
             img
             h1
-
             p
-
             a
-                width: 40%
+                // width: 40%
 
 @media (min-width: 1600px)
     .cta-full-wide
@@ -2775,14 +2880,12 @@ header
         .data
             // padding-top: 8.6em
             // padding-bottom: 8.6em
-
             img
             h1
-
             p
-
             a
-                width: 40%
+                // width: 40%
+
 /* CTA: Somos socios
 .cta-socios
     background: $sky
@@ -2922,6 +3025,7 @@ header
         padding-top: 4em
         padding-bottom: 4em
         .info
+            text-align: center
             h1
                 margin-bottom: 14px
             p
@@ -2951,7 +3055,9 @@ header
             padding-bottom: 3em
             .info
                 width: 60%
-                padding-right: 5em
+                // padding-right: 5em
+                margin-left: auto
+                margin-right: auto
                 box-sizing: border-box
                 h1
                 p
@@ -2972,9 +3078,9 @@ header
             padding-top: 5.6em
             padding-bottom: 3.4em
             .info
-                width: 60%
-                padding-right: 5em
-                box-sizing: border-box
+                // width: 60%
+                // padding-right: 5em
+                // box-sizing: border-box
                 h1
                 p
                     margin-bottom: 0
@@ -3094,8 +3200,6 @@ header
             justify-content: center
             align-items: center
             a
-                // line-height: 130%
-                // padding-bottom: 8px
                 margin: 0 4px
 
 @media (min-width: 768px)
@@ -3106,15 +3210,12 @@ header
             padding: 0 6%
             img
                 top: -120px
-                // width: 90%
                 margin: auto
                 left: 0
                 right: 0
                 text-align: center
         .contacto-inner
             padding-bottom: 4.2em
-            // margin: auto
-            // width: 80%
             h1, p
                 margin:
                     left: auto
@@ -3130,20 +3231,11 @@ header
         .products-img
             margin-top: 140px
             margin-bottom: -120px
-            // padding: 0 6%
             img
                 top: -150px
-                // margin: auto
-                // left: 0
-                // right: 0
-                // text-align: center
         .contacto-inner
             padding-bottom: 5em
             h1, p
-                // margin:
-                //     left: auto
-                //     right: auto
-                // width: 80%
             h1
             p
             .buttons
@@ -3152,29 +3244,20 @@ header
 @media (min-width: 1200px)
     .cta-contacto
         .products-img
-            margin-top: 210px
+            margin-top: 148px
             text-align: center
-            margin-bottom: -175px
-
-            // padding: 0 6%
+            margin-bottom: -155px
             img
-                top: -198px
-                // margin: auto
-                // left: 0
-                // right: 0
-
+                top: -172px
         .contacto-inner
             padding-bottom: 5em
             h1, p
-                // margin:
-                //     left: auto
-                //     right: auto
                 width: 50%
             h1
             p
             .buttons
                 a
-                    width: 12%
+                    width: 10%
                     margin-right: 17px
 
 

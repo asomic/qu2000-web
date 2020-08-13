@@ -16,7 +16,7 @@
                     <div class="data">
                         <div class="breadcrumb">
                             <a href="{{ asset('/catalogo') }}">Productos</a>
-                            <span>></span>
+                            <span style="font-size: 70%">&#62;</span>
                             <a href="{{ asset('/catalogo') }}">Limpieza</a>
                         </div>
                         <h4> {{ $product->name }}</h4>
@@ -25,9 +25,7 @@
                             Proin urna urna, aliquet ac scelerisque at, aliquet vel purus. Morbi malesuada et libero sed porttitor. Integer eu leo nec neque iaculis ornare quis nec nulla. Duis odio tellus, faucibus id ex non, euismod tempor nunc. Phasellus nec felis eros. Duis sed convallis odio.
                         </p>
                         <div class="add-cotz">                         
-                                
-                                 <a class="button add"  href="{{ route('items.add',['id'=>$product->id])}}">Agregar al Cotizador</a>
-                       
+                            <a class="button add" href="{{ route('items.add',['id'=>$product->id])}}">Agregar al Cotizador</a>
                         </div>
                     </div> 
                      @endforeach
