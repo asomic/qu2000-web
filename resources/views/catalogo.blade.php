@@ -1,5 +1,9 @@
 @extends('layouts.cascara')
 
+@section('page-title')
+<title>Catálogo — QU2000</title>
+@endsection
+
 @section('all')
     <main class="site-wrapper">
 
@@ -31,10 +35,10 @@
                             @foreach ($products as $product)
 
                             <div class="item">
-                                <a href="{{ url('item/' . $product->id)}}">
+                                <a href="{{ url('items/' . $product->id)}}">
                                     <div class="img" style="background-image: url('{{ $product->image }}')"></div></a>
                                 <div class="data">
-                                    <a  href="{{ url('item/' . $product->id)}}">
+                                    <a href="{{ url('items/' . $product->id)}}">
                                         <h5> {{ $product->name }}</h5>
                                     </a>
                                     <p class="detail">COD: {{ $product->code }}</p>

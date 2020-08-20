@@ -9,7 +9,7 @@ Route::get('catalogo', 'CatalogoController@index');
 Route::get('catalogo/{id}', 'CatalogoController@shearch');
 
 //solo esta ruta basta!
-Route::get('item/{id}', 'ItemController@detalle');
+Route::get('items/{item}', 'ItemController@show');
 Route::get('item/{id}/add', 'ItemController@add')->name('items.add');
 Route::get('item/{id}/remove', 'ItemController@delete')->name('items.remove');
 Route::get('item/{id}/update', 'ItemController@update')->name('items.update');

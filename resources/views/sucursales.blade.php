@@ -1,8 +1,10 @@
 @extends('layouts.cascara')
 
+@section('page-title')
+<title>Sucursal — QU2000</title>
+@endsection
+
 @section('all')
-
-
 <div class="wrapper">
     <section class="sucursales-wrapper pd-lr">
         <div class="sucursales">

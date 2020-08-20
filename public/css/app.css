@@ -1059,6 +1059,9 @@ header .header-inner .action-menu img {
   height: 0;
   padding-top: 93.896713615%;
   background-color: rgba(150, 150, 150, 0.2);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 4px;
   border: 12px solid #F8F8F8;
   box-sizing: border-box;
@@ -1231,9 +1234,6 @@ header .header-inner .action-menu img {
   }
 }
 @media (min-width: 900px) {
-  .item-wrapper .item .item-img {
-    height: 350px;
-  }
   .item-wrapper .item .data p.precio-red {
     margin-right: 63px;
   }
@@ -1261,9 +1261,6 @@ header .header-inner .action-menu img {
   }
 }
 @media (min-width: 1200px) {
-  .item-wrapper .item .item-img {
-    height: 500px;
-  }
   .item-wrapper .item .data p.text-detail {
     line-height: 150%;
   }
@@ -1302,9 +1299,6 @@ header .header-inner .action-menu img {
   }
 }
 @media (min-width: 1400px) {
-  .item-wrapper .item .item-img {
-    height: 500px;
-  }
   .item-wrapper .item .data p.unico {
     margin-right: 131px;
   }
@@ -1334,9 +1328,6 @@ header .header-inner .action-menu img {
   }
 }
 @media (min-width: 1600px) {
-  .item-wrapper .item .item-img {
-    height: 500px;
-  }
   .item-wrapper .item .data p.unico {
     margin-right: 131px;
   }

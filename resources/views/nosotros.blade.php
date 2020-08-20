@@ -1,5 +1,9 @@
 @extends('layouts.cascara')
 
+@section('page-title')
+<title>Nosotros — QU2000</title>
+@endsection
+
 @section('all')
 
 <div class="wrapper">

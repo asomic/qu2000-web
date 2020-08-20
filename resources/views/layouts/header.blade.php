@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Titulo de la pagina - QU2000</title>
+    {{-- <title>Titulo de la pagina - QU2000</title> --}}
+    @yield('page-title')
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('/css/hamburgers.css') }}">
-    <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/app.css') }}?v=2">
 </head>
 <body>
     <main class="site-wrapper">

@@ -1,5 +1,8 @@
 @extends('layouts.cascara')
 
+@section('page-title')
+<title>Mayoristas — QU2000</title>
+@endsection
 
 @section('all')
 

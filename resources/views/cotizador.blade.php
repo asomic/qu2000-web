@@ -1,5 +1,7 @@
 @extends('layouts.cascara')
-
+@section('page-title')
+<title>Cotizador — QU2000</title>
+@endsection
 @section('all')
 
         <div class="wrapper cot-container pd-lr">

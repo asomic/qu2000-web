@@ -1,9 +1,10 @@
 @extends('layouts.cascara')
 
+@section('page-title')
+<title>Contacto — QU2000</title>
+@endsection
+
 @section('all')
-
-
-
         <div class="wrapper">
 
             <section class="contacto-header-wrapper pd-lr">

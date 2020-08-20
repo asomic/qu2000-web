@@ -1,17 +1,21 @@
 @extends('layouts.cascara')
 
+@section('page-title')
+<title>{{ $product->name }} — QU2000</title>
+@endsection
+
 @section('all')
 
         <div class="wrapper">
             <!-- Item -->
             <div class="item-wrapper pd-lr">
 
-                @foreach ($product as $product)
+                {{-- @foreach ($product as $product) --}}
                 <div class="item">
-                    <div class="item-img">
-                        <a href="">
-                            <div class="img" style="background-image: url('{{ $product->image }}')"></div></a>
-                            </a>
+                    <div class="item-img" style="background-image: url('{{ $product->image }}')">
+                        {{-- <div class="img" style="background-image: url('{{ $product->image }}')"></div> --}}
+                        {{-- <a href=""> --}}
+                        {{-- </a> --}}
                       </div>
                     <div class="data">
                         <div class="breadcrumb">
@@ -28,7 +32,7 @@
                             <a class="button add" href="{{ route('items.add',['id'=>$product->id])}}">Agregar al Cotizador</a>
                         </div>
                     </div> 
-                     @endforeach
+                     {{-- @endforeach --}}
                 </div>
 
                 <div class="como-cotizar">

@@ -11,10 +11,10 @@ use Session;
 
 class ItemController extends Controller
 {
-    public function detalle($id)
+    public function show(Product $item)
     {
-        $product = Product::where('id',$id)->get()->all();
-        return view('/item')->with('product', $product);
+        // $product = Product::where('id',$id)->get()->all();
+        return view('item')->with('product', $item);
     }
 
     public function add($id)
