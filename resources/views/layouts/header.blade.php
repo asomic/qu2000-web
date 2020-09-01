@@ -37,7 +37,7 @@
                     </ul>
                 </nav>
                 <div class="action-menu">
-                    <a href="{{ asset('/cotizador') }}" class="cart-menu has-items">
+                    <a href="{{ asset('/cotizador') }}" class="cart-menu @if(session::has('itemList')) @if(count(session::get('itemList')) > 0 )  has-items @endif @endif">
                         <img src="{{ asset('/images/cart-process.png') }}" alt="Ir al cotizador">
                     </a>
                     <button class="hamburger hamburger--collapse" type="button">
