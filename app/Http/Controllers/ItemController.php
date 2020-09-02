@@ -43,8 +43,8 @@ class ItemController extends Controller
         }
         Session::flash('itemAdded',true);
 
-        return Redirect::route('items.show', ['item' => $product->id]);
-
+        //return Redirect::route('items.show', ['item' => $product->id]);
+        return Redirect::back();
     }
 
 

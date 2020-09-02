@@ -135,12 +135,12 @@ $(function(){
         }
       } )
 
-      $('.add').click(function(e){
-        $('.alerts-wrapper').addClass('show');
-        setTimeout(function(){
-          $('.alerts-wrapper').removeClass('show');
-        }, 2000);
-      });
+      // $('.add').click(function(e){
+      //   $('.alerts-wrapper').addClass('show');
+      //   setTimeout(function(){
+      //     $('.alerts-wrapper').removeClass('show');
+      //   }, 2000);
+      // });
 
     });
 
