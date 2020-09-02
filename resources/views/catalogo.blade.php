@@ -35,10 +35,10 @@
                             @foreach ($products as $product)
 
                             <div class="item">
-                                <a href="{{ url('items/' . $product->id)}}">
+                                <a href="{{ url('item/' . $product->id)}}">
                                     <div class="img" style="background-image: url('{{ $product->image }}')"></div></a>
                                 <div class="data">
-                                    <a href="{{ url('items/' . $product->id)}}">
+                                    <a href="{{ url('item/' . $product->id)}}">
                                         <h5> {{ $product->name }}</h5>
                                     </a>
                                     <p class="detail">COD: {{ $product->code }}</p>
