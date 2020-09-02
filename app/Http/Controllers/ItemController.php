@@ -19,9 +19,10 @@ class ItemController extends Controller
 
     public function add($id)
     {
-
+        dd($id);
         $product = Product::find($id); //singular!
- 
+        
+
         //dd(session::get('itemList'));
         //Session:: es lo mismo que session()
         if(Session::has('itemList')){ //verificamos que exista la lista en session
