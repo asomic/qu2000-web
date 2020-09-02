@@ -22,7 +22,7 @@
                             <a href="{{ url('/catalogo') }}">Productos</a>
                             <span style="font-size: 70%">&#62;</span>
                           @if($product->category)  
-                            <a href="{{ route('catalogo.show',['catalogo'=>$product->category->id]) }}">{{$product->category->name}}</a> 
+                            <a href="{{ route('catalogo.show',['id'=>$product->category->id]) }}">{{$product->category->name}}</a> 
                           @endIf
                         </div>
                         <h4> {{ $product->name }}</h4>
