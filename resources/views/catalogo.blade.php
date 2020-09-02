@@ -74,3 +74,16 @@
 
 
 @endsection
+
+@section('js')
+    @if(Session::has('itemAdded'))
+    <script>
+        $(document).ready(function() {
+            $('.alerts-wrapper').addClass('show');
+            setTimeout(function(){
+                $('.alerts-wrapper').removeClass('show');
+            }, 2000);
+        });
+    </script>
+    @endif
+@endsection
