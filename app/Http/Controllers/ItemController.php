@@ -19,14 +19,14 @@ class ItemController extends Controller
 
     public function add($id)
     {
-        dd($id);
+        
         $product = Product::find($id); //singular!
         
-
-        //dd(session::get('itemList'));
+        
         //Session:: es lo mismo que session()
         if(Session::has('itemList')){ //verificamos que exista la lista en session
            $list = Session::get('itemList'); // obetenemos la lista de preducto de la seccion
+
            $list[$product->id] = [ // list es un array de productos y sus cantidades. la llave del arreglo es el id del producto
                 'product' => $product->toArray(),              
                 'quantity' =>  1        
@@ -42,7 +42,8 @@ class ItemController extends Controller
            Session::put('itemList',$list);
         }
         Session::flash('itemAdded',true);
-        return Redirect::route('items.add', ['product',$product->id]);
+
+        return Redirect::route('items.show', ['item' => $product->id]);
 
 
 
