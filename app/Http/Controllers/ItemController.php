@@ -19,6 +19,7 @@ class ItemController extends Controller
 
     public function add($id)
     {
+
         $product = Product::find($id); //singular!
  
         //dd(session::get('itemList'));
@@ -39,8 +40,8 @@ class ItemController extends Controller
             ];
            Session::put('itemList',$list);
         }
-        
-        return Redirect::back();
+        Session::flash('itemAdded',true);
+        return Redirect::route('items.add', ['product',$product->id]);
 
 
 

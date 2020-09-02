@@ -19,9 +19,11 @@
                       </div>
                     <div class="data">
                         <div class="breadcrumb">
-                            <a href="{{ asset('/catalogo') }}">Productos</a>
+                            <a href="{{ url('/catalogo') }}">Productos</a>
                             <span style="font-size: 70%">&#62;</span>
-                            <a href="{{ asset('/catalogo') }}">Limpieza</a>
+                          @if($product->category)  
+                            <a href="{{ route('catalogo.show',['catalogo'=>$product->category->id]) }}">{{$product->category->name}}</a> 
+                          @endIf
                         </div>
                         <h4> {{ $product->name }}</h4>
                         <p class="detail">COD: {{ $product->code }}</p><br>

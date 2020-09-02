@@ -6,10 +6,10 @@ Route::get('/', 'HomeController@index');
 
 
 Route::get('catalogo', 'CatalogoController@index'); 
-Route::get('catalogo/{id}', 'CatalogoController@shearch');
+Route::get('catalogo/{id}', 'CatalogoController@shearch')->name('catalogo.show');
 
 //solo esta ruta basta!
-Route::get('item/{item}', 'ItemController@show');
+Route::get('item/{item}', 'ItemController@show')->name('items.show');
 Route::get('item/{id}/add', 'ItemController@add')->name('items.add');
 Route::get('item/{id}/remove', 'ItemController@delete')->name('items.remove');
 Route::get('item/{id}/update', 'ItemController@update')->name('items.update');
