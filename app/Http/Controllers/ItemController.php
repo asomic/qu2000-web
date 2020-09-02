@@ -45,8 +45,6 @@ class ItemController extends Controller
 
         return Redirect::route('items.show', ['item' => $product->id]);
 
-
-
     }
 
 
