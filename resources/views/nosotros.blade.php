@@ -30,18 +30,18 @@
                 </div>
                 <div class="line"></div>
                 <div class="data">
-                    <h4 class="alt-title">2000</h4>
+                    <h4 class="alt-title">1998</h4>
                     <p>
-                        Mauris dapibus tincidunt tortor, sit amet convallis ante fringilla nec. Aenean fermentum arcu id nisi luctus porttitor ut vel nisl. Ut vulputate orci eget sodales euismod.
+                        Se da origen a Qu2000 en Quilpoco, una zona rural perteneciente a la comuna de Rauco en la región del Maule, sus inicios fueron por medio de la fabricación artesanal y rudimentaria de bidones de cloro de 5 litros que posteriormente eran vendidos en los alrededores de la comuna utilizando el sistema “puerta a puerta”. 
                     </p>
                 </div>
             </div>
 
             <div class="item">
                 <div class="data">
-                    <h4 class="alt-title">2003</h4>
+                    <h4 class="alt-title">2010</h4>
                     <p>
-                        Mauris dapibus tincidunt tortor, sit amet convallis ante fringilla nec. Aenean fermentum arcu id nisi luctus porttitor ut vel nisl. Ut vulputate orci eget sodales euismod.
+                        En miras de expandirse y con la ambición de vender a distribuidoras a lo largo de todo Chile, Qu2000 comienza a diversificarse en el mercado, produciendo nuevos productos, añadiendo marcas reconocidas a nivel nacional e importando otros. 
                     </p>
                 </div>
                 <div class="line"></div>
@@ -56,18 +56,18 @@
                 </div>
                 <div class="line"></div>
                 <div class="data">
-                    <h4 class="alt-title">2005</h4>
+                    <h4 class="alt-title">2012</h4>
                     <p>
-                        Mauris dapibus tincidunt tortor, sit amet convallis ante fringilla nec. Aenean fermentum arcu id nisi luctus porttitor ut vel nisl. Ut vulputate orci eget sodales euismod.
+                        El pasar de los años ha significado que Qu2000 tenga que adaptarse, innovar y crecer para satisfacer las necesidades de sus clientes, en el año 2012 se comenzó un proceso de remodelación y automatización de toda la planta donde se fabrican los productos, logrando aumentar el rendimiento y capacidad de producción de la empresa. 
                     </p>
                 </div>
             </div>
 
             <div class="item">
                 <div class="data">
-                    <h4 class="alt-title">2008</h4>
+                    <h4 class="alt-title">Actualidad</h4>
                     <p>
-                        Mauris dapibus tincidunt tortor, sit amet convallis ante fringilla nec. Aenean fermentum arcu id nisi luctus porttitor ut vel nisl. Ut vulputate orci eget sodales euismod.
+                        Actualmente, somos una empresa fabricante e importadora posicionada dentro de las comercializadoras de productos de aseo alternativos más grandes del sur de Chile, día a día buscamos tener una amplia gama de productos a precios bajos y de gran calidad para que nuevas personas decidan emprender junto a nosotros. 
                     </p>
                 </div>
                 <div class="line"></div>

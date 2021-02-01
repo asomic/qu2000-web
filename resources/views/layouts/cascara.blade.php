@@ -32,7 +32,7 @@
                         <a href="{{ asset('/catalogo') }}">Catálogo</a>
                         <a href="{{ asset('/nosotros') }}">Nosotros</a>
                         <a href="{{ asset('/mayoristas') }}">Mayoristas</a>
-                        <a href="{{ asset('/sucursales') }}">Sucursales</a>
+                        {{-- <a href="{{ asset('/sucursales') }}">Sucursales</a> --}}
                         <a href="{{ asset('/contacto') }}">Contacto</a>
                     </ul>
                 </nav>

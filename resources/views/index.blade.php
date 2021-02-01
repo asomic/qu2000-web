@@ -111,7 +111,7 @@
                         Comunícate con nosotros de manera simple, aquí te dejamos dos métodos, vía WhatsApp o a través de nuestro formulario. #Conversemos.
                     </p>
                     <div class="buttons">
-                        <a class="button goto whatsapp" href="/">
+                        <a class="button goto whatsapp" target="_blank" href="https://wa.me/56939216077">
                             Via Whatsapp
                         </a>
                         <a class="button goto" href="/contacto">
