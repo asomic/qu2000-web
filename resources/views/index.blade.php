@@ -13,9 +13,9 @@
             <!-- Banners -->
             <section class="banners pd-lr">
                 <div class="banners-inner">
-                    <div class="item" style="background-image: url()"></div>
-                    <div class="item" style="background-image: url()"></div>
-                    <div class="item" style="background-image: url()"></div>
+                    <div class="item" style="background-image: url('/images/banner_1.jpg')"></div>
+                    <div class="item" style="background-image: url('/images/banner_2.jpg')"></div>
+                    <div class="item" style="background-image: url('/images/banner_3.jpg')"></div>
                 </div>
             </section>
 

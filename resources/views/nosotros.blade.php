@@ -10,7 +10,7 @@
     <!-- Nootros Header -->
     <section class="nosotros-header-wrapper pd-lr">
         <div class="nosotros-header">
-            <div class="img" style="background-image: url()"></div>
+            <div class="img" style="background-image: url(/images/familia_qu2000.jpg)"></div>
             <div class="data">
                 <h1>Tradición Familiar</h1>
                 <p>
@@ -26,7 +26,7 @@
 
             <div class="item">
                 <div class="img-wrapper">
-                    <div class="img"></div>
+                    <div class="img" style="background-image: url(/images/nosotros_1998.jpg)"></div>
                 </div>
                 <div class="line"></div>
                 <div class="data">
@@ -46,13 +46,13 @@
                 </div>
                 <div class="line"></div>
                 <div class="img-wrapper">
-                    <div class="img"></div>
+                    <div class="img" style="background-image: url(/images/nosotros_2010.jpg)"></div>
                 </div>
             </div>
 
             <div class="item">
                 <div class="img-wrapper">
-                    <div class="img"></div>
+                    <div class="img" style="background-image: url(/images/nosotros_2012.jpg)"></div>
                 </div>
                 <div class="line"></div>
                 <div class="data">
@@ -72,7 +72,7 @@
                 </div>
                 <div class="line"></div>
                 <div class="img-wrapper">
-                    <div class="img"></div>
+                    <div class="img" style="background-image: url(/images/nosotros_hoy.jpg)"></div>
                 </div>
             </div>
 
