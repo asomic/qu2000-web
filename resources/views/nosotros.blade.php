@@ -72,7 +72,7 @@
                 </div>
                 <div class="line"></div>
                 <div class="img-wrapper">
-                    <div class="img" style="background-image: url(/images/nosotros_hoy.jpg)"></div>
+                    <div class="img" style="background-image: url(/images/nosotros_hoy_.jpg)"></div>
                 </div>
             </div>
 
