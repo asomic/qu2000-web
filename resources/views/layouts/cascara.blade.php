@@ -72,15 +72,17 @@
                     </div>
                     <div class="numbers">
                         <h6>Números de Atención</h6>
-                        <a href="tel:+56 75 2 222 222">+56 75 2 222 222</a>
-                        <a href="tel:+56 75 2 222 222">+56 75 2 222 222</a>
+                        <a href="tel:+56939216077">+56 9 392 16 077</a>
+                        <a href="tel:+56979821243">+56 9 798 21 243</a>
                     </div>
                     <div class="fabrica">
                         <h6>Fábrica</h6>
                         <p>
-                            3M25+4J Quilpoco, Rauco
+                            Ruta J-60, Km 13.2
                             <br />
-                            Maule, Chile
+                            Sector Quilpoco, Rauco
+                            <br />
+                            Curicó, Región del Maule
                         </p>
                     </div>
                 </div>

@@ -63,7 +63,7 @@
             </section>
 
             <!-- Testimonios -->
-            <section class="mayoristas-testimonios-wrapper ">
+            {{-- <section class="mayoristas-testimonios-wrapper ">
                 <div class="mayoristas-testimonios pd-lr">
 
                     <!-- Item -->
@@ -94,6 +94,6 @@
                     </div>
 
                 </div>
-            </section>
+            </section> --}}
         </div>
 @endsection
