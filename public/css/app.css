@@ -1008,6 +1008,9 @@ header .header-inner .action-menu img {
   .catalogo-wrapper .grid-productos-wrapper .pagination-wrapper {
     margin-top: 0;
   }
+  .catalogo-wrapper .grid-productos-wrapper .pagination-wrapper .pagination.pd-b {
+    margin-bottom: 0;
+  }
   .catalogo-wrapper .grid-productos-wrapper .grid-productos-wrapper-inner.index-pd {
     padding-top: 4.8em;
     padding-bottom: 2.6em;
