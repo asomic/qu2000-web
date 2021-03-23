@@ -15,7 +15,7 @@ class MailControllerMayorista extends Controller
     public function sendmail(Request $request)
     {
 
-      Mail::to("trindamorales@gmail.com")->send(new ContactMailMayorista($request->input()));
+      Mail::to("contacto@qu2000.cl")->send(new ContactMailMayorista($request->input()));
 
 
       if (Mail::failures()) {

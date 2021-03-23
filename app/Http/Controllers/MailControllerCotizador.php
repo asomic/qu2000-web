@@ -15,7 +15,7 @@ class MailControllerCotizador extends Controller
     public function mail(Request $request)
     {
 
-      Mail::to("trindamorales@gmail.com")->send(new ContactMailCotizador($request->input()));
+      Mail::to("contacto@qu2000.cl")->send(new ContactMailCotizador($request->input()));
 
 
       if (Mail::failures()) {
