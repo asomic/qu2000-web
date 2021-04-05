@@ -60,4 +60,15 @@
 
 @endsection
 
+@section('js')
+    <script>
+        $(document).ready(function() {
+            $('.toast-wrapper').addClass('show');
+            setTimeout(function(){
+                $('.toast-wrapper').removeClass('show');
+            }, 3000);
+        });
+    </script>
+@endsection
+
 

@@ -20,6 +20,12 @@
             </div>
         </div>
 
+        <div class="toast-wrapper">
+            <div class="toast sended">
+                <p>Mensaje enviado</p>
+            </div>
+        </div>
+
         <!-- Header -->
         <header>
             <div class="header-inner pd-lr">

@@ -40,12 +40,25 @@
                                 <!-- <input type="text" placeholder="Ingrese su región"> -->
                                 <select name="region" required>
                                     <option value="" disabled selected>Seleccione una región</option>
-                                    <option value="I de Tarapacá">I de Tarapacá</option>
-                                    <option value="II de Antofagasta">II de Antofagasta</option>
-                                    <option value="III de Copiapó">III de Copiapó</option>
+                                    <option value="">Arica y Parinacota</option>
+                                    <option value="">Tarapacá</option>
+                                    <option value="">Antofagasta</option>
+                                    <option value="">Atacama</option>
+                                    <option value="">Coquimbo</option>
+                                    <option value="">Valparaíso</option>
+                                    <option value="">Metropolitana de Santiago</option>
+                                    <option value="">Libertador General Bernardo O’Higgins</option>
+                                    <option value="">Maule</option>
+                                    <option value="">Ñuble</option>
+                                    <option value="">Biobío</option>
+                                    <option value="">La Araucanía</option>
+                                    <option value="">Los Ríos</option>
+                                    <option value="">Los Lagos</option>
+                                    <option value="">Aysén del General Carlos Ibáñez del Campo</option>
+                                    <option value="">Magallanes y la Antártica Chilena</option>
                                 </select>
                             </label>
-                            <label for="">
+                            {{-- <label for="">
                                 <span>Tipo de Negocio</span>
                                 <select name="deal" required>
                                     <option value="" disabled selected>Seleccione un Tipo de Negocio</option>
@@ -53,7 +66,7 @@
                                     <option value="Valor 2">Valor 2</option>
                                     <option value="Valor 3">Valor 3</option>
                                 </select>
-                            </label>
+                            </label> --}}
 
                             <button class="button goto" type="submit">Quiero ser socio</button>
                         </form>
@@ -96,4 +109,16 @@
                 </div>
             </section> --}}
         </div>
+@endsection
+
+
+@section('js')
+    <script>
+        $(document).ready(function() {
+            $('.toast-wrapper').addClass('show');
+            setTimeout(function(){
+                $('.toast-wrapper').removeClass('show');
+            }, 3000);
+        });
+    </script>
 @endsection
