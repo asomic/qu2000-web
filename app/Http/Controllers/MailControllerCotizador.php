@@ -19,12 +19,14 @@ class MailControllerCotizador extends Controller
 
 
       if (Mail::failures()) {
+        Session::flash('mail.error', true);
+        return redirect()->route('cotizador');
 
-      return response('Error, revisar ',500);
       }
       else {
 
-        return response('Tus productos se enviaron correctamente',200);
+        Session::flash('mail.success', true);
+        return redirect()->route('cotizador');
       }
 
 

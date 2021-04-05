@@ -20,9 +20,15 @@
             </div>
         </div>
 
-        <div class="toast-wrapper">
+        <div class="toast-wrapper success">
             <div class="toast sended">
                 <p>Mensaje enviado</p>
+            </div>
+        </div>
+
+        <div class="toast-wrapper error">
+            <div class="toast sended">
+                <p>Error al enviar el formulario</p>
             </div>
         </div>
 

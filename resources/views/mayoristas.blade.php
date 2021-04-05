@@ -113,12 +113,28 @@
 
 
 @section('js')
+@section('js')
+@if(Session::has('mail.success'))
+    <script>
+        
+        $(document).ready(function() {
+            $('.toast-wrapper.success').addClass('show');
+            setTimeout(function(){
+                $('.toast-wrapper.success').removeClass('show');
+            }, 10000);
+        });
+
+    </script>
+@endif
+@if(Session::has('mail.error'))
     <script>
         $(document).ready(function() {
-            $('.toast-wrapper').addClass('show');
+            $('.toast-wrapper.error').addClass('show');
             setTimeout(function(){
-                $('.toast-wrapper').removeClass('show');
-            }, 3000);
+                $('.toast-wrapper.error').removeClass('show');
+            }, 10000);
         });
     </script>
+@endif
+@endsection
 @endsection

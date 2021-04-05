@@ -9,7 +9,7 @@
     <p>Email: {{$datamayorista['mail']}}</p>
     <p>Telefono: {{$datamayorista['phone']}}</p>
     <p>Region: {{$datamayorista['region']}}</p>
-    <p>Tipo de Negocio: {{$datamayorista['deal']}}</p>
+    {{-- <p>Tipo de Negocio: {{$datamayorista['deal']}}</p> --}}
 
 
 
