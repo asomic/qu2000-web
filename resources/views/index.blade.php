@@ -14,8 +14,8 @@
             <section class="banners pd-lr">
                 <div class="banners-inner">
                     <div class="item" style="background-image: url('/images/banner_1.jpg')"></div>
-                    <div class="item" style="background-image: url('/images/banner_3.jpg')"></div>
                     <div class="item" style="background-image: url('/images/banner_2.jpg')"></div>
+                    <div class="item" style="background-image: url('/images/banner_3.jpg')"></div>
                 </div>
             </section>
 
@@ -70,7 +70,7 @@
                         </p>
                         <a class="button goto" href="/mayoristas">Más Información</a>
                     </div>
-                    <div class="img" style="background-image: url({{ asset('/images/socios.jpg') }})"></div>
+                    <div class="img" style="background-image: url({{ asset('/images/socios_.jpg') }})"></div>
                 </div>
             </section>
 
