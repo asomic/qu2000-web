@@ -19,12 +19,14 @@ class MailControllerMayorista extends Controller
 
 
       if (Mail::failures()) {
+        Session::flash('mail.error', true);
+        return redirect()->route('mayoristas');
 
-      return response('Algo salio mal !',500);
       }
       else {
 
-        return response('Tus datos se enviaron correctamente ',200);
+        Session::flash('mail.success', true);
+        return redirect()->route('mayoristas');
       }
 
 

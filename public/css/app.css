@@ -498,6 +498,31 @@ a.button.ready:focus, a.button.ready:hover, button.button.ready:focus, button.bu
   font-size: 14px;
 }
 
+.toast-wrapper {
+  position: fixed;
+  z-index: 99999;
+  bottom: 3vh;
+  right: 2vw;
+  opacity: 0;
+  transition: all ease 0.3s;
+}
+.toast-wrapper.show {
+  opacity: 1;
+}
+.toast-wrapper .toast {
+  padding: 13px 18px;
+  border-radius: 26px;
+  display: flex;
+}
+.toast-wrapper .toast.sended {
+  background-color: #19A6F6;
+}
+.toast-wrapper .toast.sended p {
+  color: #F8F8F8;
+  text-align: center;
+  font-size: 14px;
+}
+
 /* Header */
 header {
   z-index: 999;

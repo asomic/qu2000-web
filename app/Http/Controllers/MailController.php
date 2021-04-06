@@ -23,12 +23,14 @@ class MailController extends Controller
 
 
       if (Mail::failures()) {
+        Session::flash('mail.error', true);
+        return redirect()->route('contacto');
 
-      return response('fallo',500);
       }
       else {
 
-        return response('Se a enviado tus datos con exito',200);
+        Session::flash('mail.success', true);
+        return redirect()->route('contacto');
       }
 
 

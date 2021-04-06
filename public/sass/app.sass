@@ -261,6 +261,26 @@ a.button, button.button
                 color: $black
                 font-size: 14px
 
+.toast-wrapper
+    position: fixed
+    z-index: 99999
+    bottom: 3vh
+    right: 2vw
+    opacity: 0
+    transition: all ease 0.3s
+    &.show
+        opacity: 1
+    .toast
+        padding: 13px 18px
+        border-radius: 26px
+        display: flex
+        &.sended
+            background-color: $sky
+            p
+                color: $soft-gray
+                text-align: center
+                font-size: 14px
+
 /* Header
 header
     z-index: 999
