@@ -28,7 +28,7 @@
                         <h4> {{ $product->name }}</h4>
                         <p class="detail">COD: {{ $product->code }}</p><br>
                         <p class="text-detail">
-                            Proin urna urna, aliquet ac scelerisque at, aliquet vel purus. Morbi malesuada et libero sed porttitor. Integer eu leo nec neque iaculis ornare quis nec nulla. Duis odio tellus, faucibus id ex non, euismod tempor nunc. Phasellus nec felis eros. Duis sed convallis odio.
+                            {{ $product->description }}
                         </p>
                         <div class="add-cotz">                         
                             <a class="button add" href="{{ route('items.add',['id'=>$product->id])}}">Agregar al Cotizador</a>
